@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
-* Студент: [Алексей Мамаев](https://up.htmlacademy.ru/htmlcss/22/user/657189).
-* Наставник: [Виталя Игошин](https://htmlacademy.ru/profile/id353627)
+*Студент: [Алексей Мамаев (LexiosAlex)](https://up.htmlacademy.ru/htmlcss/22/user/657189).
+*Наставник: [Виталя Игошин (Vitaligo)](https://htmlacademy.ru/profile/id353627)
 
 ---
 
