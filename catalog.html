@@ -15,20 +15,16 @@
             <nav class="main-navigation">
                 <ul class="site-navigation">
                     <li>
-                        <details>
-                            <summary>
-                            <a href="catalog.html">Каталог</a>
-                            </summary>
-                            <div class="menu-catalog">
-                                <p>Новинки</p>
-                                <ul>
-                                    <li><a href="catalog.html"> Сливочное</a></li>
-                                    <li><a href=""> Щербеты</a></li>
-                                    <li><a href=""> Фруктовый лед</a></li>
-                                    <li><a href=""> Мелорин</a></li>
-                                </ul>
-                            </div>
-                        </details>
+                        <a href="catalog.html">Каталог</a>
+                        <div class="menu-catalog hidden">
+                            <p>Новинки</p>
+                            <ul>
+                                <li><a href="catalog.html"> Сливочное</a></li>
+                                <li><a href=""> Щербеты</a></li>
+                                <li><a href=""> Фруктовый лед</a></li>
+                                <li><a href=""> Мелорин</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li><a href="delivery.html">Доставка и оплата</a></li>
                     <li><a href="about.html">О компании</a></li>
@@ -38,7 +34,7 @@
                         <a href=""><span>"Иконка поиска"</span></a>
                         <section class="visually-hidden">
                             <form action="index.html">
-                                <label class="visually-hidden" id="user-search">Поиск по сайту</label>
+                                <label class="visually-hidden" for="user-search">Поиск по сайту</label>
                                 <input id="user-search" type="search" name="mainsearch" placeholder="Что ищем?">
                             </form>
                         </section>
@@ -69,7 +65,7 @@
                             <ul>
                                 <li>
                                     <ul class="itm1">
-                                        <li><button class="removebtn type="button">Убрать товар</button></li>
+                                        <li><button class="removebtn" type="button">Убрать товар</button></li>
                                         <li>"Изображение первого товара"</li>
                                         <li>Пломбир с апельсиновым джемом</li>
                                         <li>1,5кг x <span>200 руб.</span></li>
@@ -78,7 +74,7 @@
                                 </li>
                                 <li>
                                     <ul class="itm2">
-                                        <li><button class="removebtn type="button">Убрать товар</button></li>
+                                        <li><button class="removebtn" type="button">Убрать товар</button></li>
                                         <li>"Второго товара"</li>
                                         <li>Клубничный пломбир с присыпкой из белого шоколада</li>
                                         <li>1,5кг x <span>300 руб.</span></li>
@@ -144,11 +140,11 @@
                 <ul>
                     <li>
                         <input class="visually-hidden filter-input-checkbox" type="checkbox" name="chocolate-sorted" id="filter-chocolate" checked>
-                        <label for="filte-chocolate">шоколадные</label>
+                        <label for="filter-chocolate">шоколадные</label>
                     </li>
-                    <li>
-                        <label for="suqar-powder">сахарные присыпки</label>
+                    <li>       
                         <input class="visually-hidden filter-input-checkbox" type="checkbox" name="suqar-powder-sorted" id="filter-suqar-powder" checked>
+                        <label for="filter-suqar-powder">сахарные присыпки</label>
                     </li>
                     <li>        
                         <input class="visually-hidden filter-input-checkbox" type="checkbox" name="fruits-sorted" id="filter-fruits">

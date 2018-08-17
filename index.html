@@ -19,38 +19,34 @@
   		    <nav class="main-navigation">
                 <ul class="site-navigation">
                     <li>
-                        <details>
-                            <summary>
-                            <a href="catalog.html">Каталог</a>
-                            </summary>
-                            <div class="menu-catalog">
-                                <p>Новинки</p>
-                                <ul>
-                                    <li><a href="catalog.html"> Сливочное</a></li>
-                                    <li><a href=""> Щербеты</a></li>
-                                    <li><a href=""> Фруктовый лед</a></li>
-                                    <li><a href=""> Мелорин</a></li>
-                                </ul>
-                            </div>
-                        </details>
+                        <a href="catalog.html">Каталог</a>
+                        <div class="menu-catalog hidden">
+                            <p>Новинки</p>
+                            <ul>
+                                <li><a href="catalog.html"> Сливочное</a></li>
+                                <li><a href=""> Щербеты</a></li>
+                                <li><a href=""> Фруктовый лед</a></li>
+                                <li><a href=""> Мелорин</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li><a href="delivery.html">Доставка и оплата</a></li>
                     <li><a href="about.html">О компании</a></li>
                 </ul>
                 <ul class="user-navigation">
                     <li class="search">
-                        <a href=""><span>"Иконка поиска"</span></a>
-                        <section class="visually-hidden">
+                        <a href=""><span class="visually-hidden">Поиск</span></a>
+                        <section>
                             <form action="index.html">
-                                <label class="visually-hidden" id="user-search">Поиск по сайту</label>
+                                <label class="visually-hidden" for="user-search">Поиск по сайту</label>
                                 <input id="user-search" type="search" name="mainsearch" placeholder="Что ищем?">
                             </form>
                         </section>
                     </li> 
                     <li class="login">
-                        <a href="#"><span>"Иконка авторизации"</span>Вход</a>
-                        <section class="visually-hidden">
-                            <form id="login-form" action="index.html" method="get">
+                        <a href="#"><span class="visually-hidden">Вход</span></a>
+                        <section>
+                            <form id="login-form" action="index.html" method="post">
                                 <p>
                                     <label class="visually-hidden" for="user-login">Логин</label>
                                     <input id="user-login" type="text" name="login" placeholder="Логин">
@@ -68,8 +64,8 @@
                         </section>
                     </li> 
                     <li class="cart">
-                        <a href="#"><span>"Иконка корзины"</span>Корзина</a>
-                        <section class="visually-hidden">
+                        <a href=""><span class="visually-hidden">Корзина</span></a>
+                        <section>
                             <p>Ваша карзина пуста=(</p>
                         </section>
                     </li> 
@@ -162,7 +158,7 @@
        		        </a>
        		    </article>
          	    <section class="subscription">
-                    <form id="subscribe-form" action="index.html" method="get"></form>
+                    <form id="subscribe-form" action="index.html" method="post"></form>
        		        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамит и не спамить всякой ненужной ерунды. Честно=)</p>
                     <p>
        	                <label class="visually-hidden" for="sub">Почта</label>
@@ -173,8 +169,7 @@
             </div>
             <section class="location">
         	    <span class="map-api">
-                    <img src="img/map.jpg" alt="Интерактивная карта" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-                    <img src="img/mappin.svg" alt="Маркер офиса на карте">   
+                    <img src="img/map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
                 </span>
         	    <div class="adress">
         		    <p>Адрес главного офиса и офлайн-магазина</p>
@@ -183,13 +178,14 @@
         		    <p>Для заказов по телефону:</p>
         		    <b>8 812 450-25-25</b>
         		    <p>(с 10 до 20 ежедневно)</p>
+                    <button class="mainbtn" form="feedback-form">Форма обратной связи</button>
         	    </div>
             </section>
             <section class="feedback visually-hidden">
                 <form id="feedback-form" action="index.html" method="get">
                     <p>
                         <label class="visually-hidden" for="feedback-name">Имя</label>
-                        <input type="text" name="feedback-username" placeholder="Как вас зовут?">
+                        <input type="text" name="feedback-username" id="feedback-name" placeholder="Как вас зовут?">
                     </p>
                     <p>
                         <label for="user-email" class="visually-hidden">Почта</label>
