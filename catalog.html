@@ -12,40 +12,86 @@
                <img src="img/mainlogo.svg" width="154" height="64" alt="Логотип магазина мороженнного GlaccyShop">
             </a>
         </div>
-      <nav class="main-navigation">
-            <ul class="site-navigation">
-                <li>
-                    <a href="catalog.html">Каталог</a>
-                    <div class="menu-catalog hidden">
-                        <p>Новинки</p>
-                        <ul>
-                            <li><a href="catalog.html"> Сливочное</a></li>
-                            <li><a href=""> Щербеты</a></li>
-                            <li><a href=""> Фруктовый лед</a></li>
-                            <li><a href=""> Мелорин</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="delivery.html">Доставка и оплата</a></li>
-                <li><a href="about.html">О компании</a></li>
-            </ul>
-            <ul class="user-navigation">
-                <li class="search">
-                    <a href="#">"Иконка поиска"</a>
-                    <div>Форма поиска</div>
-                </li> 
-                <li class="login">
-                    <a href="#">"Иконка авторизации"</a>
-                    Вход
-                    <div>Форма авторизации</div>
-                </li> 
-                <li class="login">
-                    <a href="#">"Иконка корзины"</a>
-                    Корзина
-                    <div>Форма корзины</div>
-                </li> 
-            </ul>
-        </nav>
+            <nav class="main-navigation">
+                <ul class="site-navigation">
+                    <li>
+                        <details>
+                            <summary>
+                            <a href="catalog.html">Каталог</a>
+                            </summary>
+                            <div class="menu-catalog">
+                                <p>Новинки</p>
+                                <ul>
+                                    <li><a href="catalog.html"> Сливочное</a></li>
+                                    <li><a href=""> Щербеты</a></li>
+                                    <li><a href=""> Фруктовый лед</a></li>
+                                    <li><a href=""> Мелорин</a></li>
+                                </ul>
+                            </div>
+                        </details>
+                    </li>
+                    <li><a href="delivery.html">Доставка и оплата</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                </ul>
+                <ul class="user-navigation">
+                    <li class="search">
+                        <a href=""><span>"Иконка поиска"</span></a>
+                        <section class="visually-hidden">
+                            <form action="index.html">
+                                <label class="visually-hidden" id="user-search">Поиск по сайту</label>
+                                <input id="user-search" type="search" name="mainsearch" placeholder="Что ищем?">
+                            </form>
+                        </section>
+                    </li> 
+                    <li class="login">
+                        <a href="#"><span>"Иконка авторизации"</span>Вход</a>
+                        <section class="visually-hidden">
+                            <form id="login-form" action="index.html" method="get">
+                                <p>
+                                    <label class="visually-hidden" for="user-login">Логин</label>
+                                    <input id="user-login" type="text" name="login" placeholder="Логин">
+                                </p>
+                                <p>
+                                    <label class="visually-hidden" for="user-password">пароль</label>
+                                    <input id="user-password" type="password" name="password" placeholder="Пароль">
+                                </p>
+                                <button class="mainbtn" type="submit" form="login-form">Войти</button>
+                                <ul>
+                                    <li><a href="" class="formlinks pass-forgot">Забыли пароль?</a></li>
+                                    <li><a href="" class="formlinks new-user">Новая регистрация</a></li>
+                                </ul>
+                            </form>
+                        </section>
+                    </li> 
+                    <li class="fullcart">
+                        <a href="#"><span>"Иконка корзины"</span>2 товара</a>
+                        <section class="visually-hidden">
+                            <ul>
+                                <li>
+                                    <ul class="itm1">
+                                        <li><button class="removebtn type="button">Убрать товар</button></li>
+                                        <li>"Изображение первого товара"</li>
+                                        <li>Пломбир с апельсиновым джемом</li>
+                                        <li>1,5кг x <span>200 руб.</span></li>
+                                        <li>300 руб.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="itm2">
+                                        <li><button class="removebtn type="button">Убрать товар</button></li>
+                                        <li>"Второго товара"</li>
+                                        <li>Клубничный пломбир с присыпкой из белого шоколада</li>
+                                        <li>1,5кг x <span>300 руб.</span></li>
+                                        <li>450 руб.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        <p>Итого: 750 руб</p>
+                        <a href="" class="mainbtn">Оформить заказ</a>
+                        </section>
+                    </li> 
+                </ul>
+            </nav> 
         <div class="working-time">
             <p>С 10 до 20, ежедневно</p>
             <p>8 812 450-25-25</p>
@@ -58,13 +104,68 @@
             <li><a href=""> » Сливочное</a></li>
         </ul>
     	<h1>Сливочное мороженное</h1>
-    	<div class="sorting">
-    		<p>Сортировка:</p><span class="popularity-sorting">По популярности</span>
-    		<p>Цена: 100 руб. - 500 руб.</p><span class="price-sorting"></span>
-    		<p>Жирность:</p><span class="fat-sorting"></span>
-    		<p>Наполнители</p><span class="inside-sorting"></span>
-    		<span class="catalog-btn">Применить</span>
-    	</div>
+    	<form class="sort" method="get" action="catalog.html">
+            <fieldset>
+                <legend>Сортировка</legend>
+                <select>
+                    <option>По популярности</option>
+                    <option>Сначала недорогие</option>
+                    <option>По жирности</option>
+                    <option>По дирности</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Цена:100-500 руб.</legend>
+                <div></div>
+            </fieldset>
+            <fieldset>
+                <legend>Жирность</legend>
+                <ul>
+                    <li>                 
+                        <input class="visually-hidden filter-input-radio" type="radio" name="0%-fat" id="fat0">
+                        <label for="fat0">0%</label>
+                    </li>
+                    <li>                       
+                        <input class="visually-hidden filter-input-radio" type="radio" name="less-10%-fat" id="lfat10">
+                        <label for="lfat10">до 10%</label>
+                    </li>
+                    <li>
+                        <input class="visually-hidden filter-input-radio" type="radio" name="less-30%-fat" id="lfat30">
+                        <label for="lfat30">до 30%</label>
+                    </li>
+                    <li>
+                        <input class="visually-hidden filter-input-radio" type="radio" name="more-30%-fat" id="mfat30">
+                        <label for="mfat30">выше 30%</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Наполнители</legend>
+                <ul>
+                    <li>
+                        <input class="visually-hidden filter-input-checkbox" type="checkbox" name="chocolate-sorted" id="filter-chocolate" checked>
+                        <label for="filte-chocolate">шоколадные</label>
+                    </li>
+                    <li>
+                        <label for="suqar-powder">сахарные присыпки</label>
+                        <input class="visually-hidden filter-input-checkbox" type="checkbox" name="suqar-powder-sorted" id="filter-suqar-powder" checked>
+                    </li>
+                    <li>        
+                        <input class="visually-hidden filter-input-checkbox" type="checkbox" name="fruits-sorted" id="filter-fruits">
+                        <label for="filter-fruits">фрукты</label>
+                    </li>
+                    <li>                      
+                        <input class="visually-hidden filter-input-checkbox" type="checkbox" name="sirup-sorted" id="filter-sirup">
+                        <label for="filter-sirup">сиропы</label>
+                    </li>
+                    <li>                     
+                        <input class="visually-hidden filter-input-checkbox" type="checkbox" name="jam-sorted" id="filter-jam">
+                        <label for="filter-jam">джемы</label>
+                    </li>
+                </ul>
+            </fieldset>
+    		<button type="submit" class="sort-btn">Применить</button>
+    	</form>
     	<section class="assortment">
         	<ul class="product">
         		<li class="product">		
