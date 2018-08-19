@@ -50,7 +50,7 @@
                                     <input id="user-login" type="text" name="login" placeholder="Электронная почта">
                                 </p>
                                 <p>
-                                    <label class="visually-hidden" for="user-password">пароль</label>
+                                    <label class="visually-hidden" for="user-password">Пароль</label>
                                     <input id="user-password" type="password" name="password" placeholder="Пароль">
                                 </p>
                                 <button class="mainbtn" type="submit" form="login-form">Войти</button>
@@ -68,14 +68,14 @@
                             <ul>
                                 <li class="itm1">
                                     <button class="removebtn" type="button">Убрать товар</button>
-                                    <p>"Изображение первого товара"</p>
+                                    <img src="img/orange.jpg" width="14" height="14" alt="Изображение первого товара">
                                     <p>Пломбир с апельсиновым джемом</p>
                                     <p>1,5кг x <span>200 руб.</span></p>
                                     <p>300 руб.</p>
                                 </li>
                                 <li class="itm2">
                                     <button class="removebtn" type="button">Убрать товар</button>
-                                    <o>"Второго товара"</p>
+                                    <img src="img/strawberry.jpg" width="14" height="14" alt="Изображение второго товара">
                                     <p>Клубничный пломбир с присыпкой из белого шоколада</p>
                                     <p>1,5кг x <span>300 руб.</span></p>
                                     <p>450 руб.</p>
@@ -93,7 +93,7 @@
         </div>
     </header>
     <main>
-        <h3 class="visually-hidden">Содержание каталога</h3>
+        <h1 class="visually-hidden">Содержание каталога</h1>
     	<ul class="way">
             <li><a href="index.html">Главная</a></li>
             <li><a href="#"> » Каталог</a></li>
@@ -113,8 +113,12 @@
             <fieldset>
                 <legend>Цена:</legend>
                 <p>
-                    <input type="text" class="maxinput" readonly value="500" name="price_max">
-                    <input type="text" class="maxinput" readonly value="500" name="price_max">
+                    <label class="visually-hidden" for="price-min">Минимальная цена:</label>
+                    <input id="price-min" type="text" class="mininput" value="100" name="price_min">
+                    <span>руб. - </span>
+                    <label class="visually-hidden" for="price-max">Максимальная цена:</label>
+                    <input id="price-max" type="text" class="maxinput" value="500" name="price_max">
+                    <span>руб.</span>
                 </p>
                 <div id="range-slider">
                     <span></span>
@@ -124,19 +128,19 @@
                 <legend>Жирность</legend>
                 <ul>
                     <li>                 
-                        <input class="visually-hidden filter-input-radio" type="radio" name="0%fat" id="fat0">
+                        <input class="visually-hidden filter-input-radio" type="radio" name="radioSort" value="0%fat" id="fat0">
                         <label for="fat0">0%</label>
                     </li>
                     <li>                       
-                        <input class="visually-hidden filter-input-radio" type="radio" name="less10%fat" id="lfat10">
+                        <input class="visually-hidden filter-input-radio" type="radio" name="radioSort" value="less10%fat" id="lfat10">
                         <label for="lfat10">до 10%</label>
                     </li>
                     <li>
-                        <input class="visually-hidden filter-input-radio" type="radio" name="less30%fat" id="lfat30">
+                        <input class="visually-hidden filter-input-radio" type="radio" name="radioSort" value="less30%fat" id="lfat30">
                         <label for="lfat30">до 30%</label>
                     </li>
                     <li>
-                        <input class="visually-hidden filter-input-radio" type="radio" name="more30%fat" id="mfat30">
+                        <input class="visually-hidden filter-input-radio" type="radio" name="radioSort" value="more30%fat" id="mfat30">
                         <label for="mfat30">выше 30%</label>
                     </li>
                 </ul>
@@ -169,7 +173,7 @@
     		<button type="submit" class="sort-btn">Применить</button>
     	</form>
     	<section class="assortment">
-            <h3 class="visually-hidden">Ассортимент</h3>
+            <h2 class="visually-hidden">Ассортимент</h2>
         	<ul class="product">
         		<li class="product">		
         			<a href="#"><h3 class="product">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3></a>
@@ -245,7 +249,7 @@
         		</li>
         	</ul>
         </section>
-        <h3 class="visually-hidden">Скролл страниц каталога</h3>
+        <h2 class="visually-hidden">Скролл страниц каталога</h2>
         <div class="product-list">
         	<ul class="product-list-display">
                 <li><a href="#">Назад</a></li>
@@ -261,14 +265,14 @@
         <footer>
             <h3 class="visually-hidden">Подпишитесь на нас в соц.сетях</h3>
             <ul class="socialmedia">
-                <li><a class="social tweeter" href="#">Tweeter</a></li>
-                <li><a class="social instagram" href="#">Instagram</a></li>
-                <li><a class="social facebook" href="#">Facebook</a></li>
-                <li><a class="social vk" href="#">Vkontakte</a></li>
+                <li><a class="social twitter" href="#"><spam clas="visually-hidden">Twitter</spam></a></li>
+                <li><a class="social instagram" href="#"><spam clas="visually-hidden">Instagram</spam></a></li>
+                <li><a class="social facebook" href="#"><spam clas="visually-hidden">Facebook</spam></a></li>
+                <li><a class="social vk" href="#"><spam clas="visually-hidden">Vkontakte</spam></a></li>
             </ul>
             <div>
             <ul class="footer-info">
-                <li><span>Сердечко</span><a class="provider" href="#">Для поставщиков</a></li>
+                <li>Сердечко<a class="provider" href="#">Для поставщиков</a></li>
                 <li><a class="production" href="#">О производстве</a></li>
                 <li><a class="documents" href="#">Наши документы</a></li>
                 <li><a class="standarts" href="#">Экологические стандарты</a></li>

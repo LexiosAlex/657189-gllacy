@@ -51,10 +51,10 @@
                             <form id="login-form" action="https://echo.htmlacademy.ru" method="post">
                                 <p>
                                     <label class="visually-hidden" for="user-login">Логин</label>
-                                    <input id="user-login" type="text" name="login" placeholder="Электронная почта">
+                                    <input id="user-login" type="email" name="login" placeholder="Электронная почта">
                                 </p>
                                 <p>
-                                    <label class="visually-hidden" for="user-password">пароль</label>
+                                    <label class="visually-hidden" for="user-password">Пароль</label>
                                     <input id="user-password" type="password" name="password" placeholder="Пароль">
                                 </p>
                                 <button class="mainbtn" type="submit" form="login-form">Войти</button>
@@ -79,8 +79,9 @@
             </div>
         </header>
   	    <main>
+            <h1 class="visually-hidden">Магазин мороженного &laquo;Глейси&raquo;</h1>
             <section class="slider">
-                <h3 class="visually-hidden">Слайдер на главной странице сайта</h3>
+                <h2 class="visually-hidden">Новинки</h2>
                 <div class="slider-controls">
                     <label for="slide-1">01</label>
                     <label for="slide-2">02</label>
@@ -104,7 +105,7 @@
                     </li>
                 </ul>
             </section>
-            <h3 class="visually-hidden">Бонусы при покупке у нас</h3>
+            <h2 class="visually-hidden">Бонусы при покупке у нас</h2>
             <div class="special">
         	   <div class="special-offer1">
         	        <h2>Малинка даром!</h2>
@@ -118,6 +119,7 @@
         	    </div>
             </div>
             <section class="hit">
+                <h2 class="visually-hidden">Популярные товары</h2>
         	    <ul class="product-hits">
         		    <li class="product-hit"> 		    
         		        <a href="#"><h3 class="product-description">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3></a>
@@ -146,7 +148,7 @@
         	    </ul>
             </section>
             <section class="advantages">
-                <h3 class="visually-hidden">Наши преймущества</h3>
+                <h2 class="visually-hidden">Наши преймущества</h2>
         	    <b class="advantages-aboute">Магазин Глэйси - это онлайн - и офлайн-магазин по продаже мороженного собственного производства на развес</b>
         	    <ul class="advantages-description">
         		    <li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
@@ -163,19 +165,19 @@
        		        </a>
        		    </article>
          	    <section class="subscription">
-                    <h3 class="visually-hidden">Подписка</h3>
+                    <h2 class="visually-hidden">Подписка</h2>
                     <form id="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
        		            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамит и не спамить всякой ненужной ерунды. Честно=)</p>
                         <p>
        	                    <label class="visually-hidden" for="sub">Почта</label>
-                            <input type="text" name="sub-email" id="sub" placeholder="Электронная почта" >
+                            <input type="email" name="sub-email" id="sub" placeholder="Электронная почта" >
        	                    <button class="mainbtn" type="submit">Отправить</button>
                         </p>
                     </form>
                 </section>
             </div>
             <section class="location">
-                <h3 class="visually-hidden">Контактая информация</h3>
+                <h2 class="visually-hidden">Контактая информация</h2>
         	    <span class="map-api">
                     <img src="img/map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
                 </span>
@@ -190,7 +192,7 @@
         	    </div>
             </section>
             <section class="feedback visually-hidden">
-                <h3 class="visually-hidden">Форма обратной связи</h3>
+                <h2 class="visually-hidden">Форма обратной связи</h2>
                 <form id="feedback-form" action="https://echo.htmlacademy.ru" method="post">
                     <p>
                         <label class="visually-hidden" for="feedback-name">Имя</label>
@@ -198,7 +200,7 @@
                     </p>
                     <p>
                         <label for="user-email" class="visually-hidden">Почта</label>
-                        <input type="text" name="email" id="user-email" placeholder="Ваша почта для ответа?">
+                        <input type="email" name="email" id="user-email" placeholder="Ваша почта для ответа?">
                     </p>
                     <p>
                         <label class="visually-hidden" for="fedcomment">Ваш коментарий</label>
