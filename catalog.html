@@ -33,7 +33,8 @@
                     <li class="search">
                         <a href="#">Поиск</a>
                         <section>
-                            <form action="index.html">
+                            <h3 class="visually-hidden">Форма поиска по сайту</h3>
+                            <form action="https://echo.htmlacademy.ru">
                                 <label class="visually-hidden" for="user-search">Поиск по сайту</label>
                                 <input id="user-search" type="search" name="mainsearch" placeholder="Что ищем?">
                             </form>
@@ -42,7 +43,8 @@
                     <li class="login">
                         <a href="#">Вход</a>
                         <section>
-                            <form id="login-form" action="index.html" method="post">
+                            <h3 class="visually-hidden">Форма входа</h3>
+                            <form id="login-form" action="https://echo.htmlacademy.ru" method="post">
                                 <p>
                                     <label class="visually-hidden" for="user-login">Логин</label>
                                     <input id="user-login" type="text" name="login" placeholder="Электронная почта">
@@ -62,24 +64,21 @@
                     <li class="fullcart">
                         <a href="#"><span>"Иконка корзины"</span>2 товара</a>
                         <section class="visually-hidden">
+                            <h3 class="visually-hidden">Корзина</h3>
                             <ul>
-                                <li>
-                                    <ul class="itm1">
-                                        <li><button class="removebtn" type="button">Убрать товар</button></li>
-                                        <li>"Изображение первого товара"</li>
-                                        <li>Пломбир с апельсиновым джемом</li>
-                                        <li>1,5кг x <span>200 руб.</span></li>
-                                        <li>300 руб.</li>
-                                    </ul>
+                                <li class="itm1">
+                                    <button class="removebtn" type="button">Убрать товар</button>
+                                    <p>"Изображение первого товара"</p>
+                                    <p>Пломбир с апельсиновым джемом</p>
+                                    <p>1,5кг x <span>200 руб.</span></p>
+                                    <p>300 руб.</p>
                                 </li>
-                                <li>
-                                    <ul class="itm2">
-                                        <li><button class="removebtn" type="button">Убрать товар</button></li>
-                                        <li>"Второго товара"</li>
-                                        <li>Клубничный пломбир с присыпкой из белого шоколада</li>
-                                        <li>1,5кг x <span>300 руб.</span></li>
-                                        <li>450 руб.</li>
-                                    </ul>
+                                <li class="itm2">
+                                    <button class="removebtn" type="button">Убрать товар</button>
+                                    <o>"Второго товара"</p>
+                                    <p>Клубничный пломбир с присыпкой из белого шоколада</p>
+                                    <p>1,5кг x <span>300 руб.</span></p>
+                                    <p>450 руб.</p>
                                 </li>
                             </ul>
                         <p>Итого: 750 руб</p>
@@ -94,13 +93,14 @@
         </div>
     </header>
     <main>
+        <h3 class="visually-hidden">Содержание каталога</h3>
     	<ul class="way">
             <li><a href="index.html">Главная</a></li>
             <li><a href="#"> » Каталог</a></li>
             <li><a href=""> » Сливочное</a></li>
         </ul>
     	<h1>Сливочное мороженное</h1>
-    	<form class="sort" method="get" action="catalog.html">
+    	<form class="sort" method="get" action="https://echo.htmlacademy.ru">
             <fieldset>
                 <legend>Сортировка</legend>
                 <select>
@@ -111,26 +111,32 @@
                 </select>
             </fieldset>
             <fieldset>
-                <legend>Цена:100-500 руб.</legend>
-                <div></div>
-            </fieldset>
+                <legend>Цена:</legend>
+                <p>
+                    <input type="text" class="maxinput" readonly value="500" name="price_max">
+                    <input type="text" class="maxinput" readonly value="500" name="price_max">
+                </p>
+                <div id="range-slider">
+                    <span></span>
+                </div>
+            </fieldset>>
             <fieldset>
                 <legend>Жирность</legend>
                 <ul>
                     <li>                 
-                        <input class="visually-hidden filter-input-radio" type="radio" name="0%-fat" id="fat0">
+                        <input class="visually-hidden filter-input-radio" type="radio" name="0%fat" id="fat0">
                         <label for="fat0">0%</label>
                     </li>
                     <li>                       
-                        <input class="visually-hidden filter-input-radio" type="radio" name="less-10%-fat" id="lfat10">
+                        <input class="visually-hidden filter-input-radio" type="radio" name="less10%fat" id="lfat10">
                         <label for="lfat10">до 10%</label>
                     </li>
                     <li>
-                        <input class="visually-hidden filter-input-radio" type="radio" name="less-30%-fat" id="lfat30">
+                        <input class="visually-hidden filter-input-radio" type="radio" name="less30%fat" id="lfat30">
                         <label for="lfat30">до 30%</label>
                     </li>
                     <li>
-                        <input class="visually-hidden filter-input-radio" type="radio" name="more-30%-fat" id="mfat30">
+                        <input class="visually-hidden filter-input-radio" type="radio" name="more30%fat" id="mfat30">
                         <label for="mfat30">выше 30%</label>
                     </li>
                 </ul>
@@ -139,23 +145,23 @@
                 <legend>Наполнители</legend>
                 <ul>
                     <li>
-                        <input class="visually-hidden filter-input-checkbox" type="checkbox" name="chocolate-sorted" id="filter-chocolate" checked>
+                        <input class="visually-hidden filter-input-checkbox" type="checkbox" name="chocolatesorted" id="filter-chocolate" checked>
                         <label for="filter-chocolate">шоколадные</label>
                     </li>
                     <li>       
-                        <input class="visually-hidden filter-input-checkbox" type="checkbox" name="suqar-powder-sorted" id="filter-suqar-powder" checked>
+                        <input class="visually-hidden filter-input-checkbox" type="checkbox" name="suqarpowdersorted" id="filter-suqar-powder" checked>
                         <label for="filter-suqar-powder">сахарные присыпки</label>
                     </li>
                     <li>        
-                        <input class="visually-hidden filter-input-checkbox" type="checkbox" name="fruits-sorted" id="filter-fruits">
+                        <input class="visually-hidden filter-input-checkbox" type="checkbox" name="fruitssorted" id="filter-fruits">
                         <label for="filter-fruits">фрукты</label>
                     </li>
                     <li>                      
-                        <input class="visually-hidden filter-input-checkbox" type="checkbox" name="sirup-sorted" id="filter-sirup">
+                        <input class="visually-hidden filter-input-checkbox" type="checkbox" name="sirupsorted" id="filter-sirup">
                         <label for="filter-sirup">сиропы</label>
                     </li>
                     <li>                     
-                        <input class="visually-hidden filter-input-checkbox" type="checkbox" name="jam-sorted" id="filter-jam">
+                        <input class="visually-hidden filter-input-checkbox" type="checkbox" name="jamsorted" id="filter-jam">
                         <label for="filter-jam">джемы</label>
                     </li>
                 </ul>
@@ -163,6 +169,7 @@
     		<button type="submit" class="sort-btn">Применить</button>
     	</form>
     	<section class="assortment">
+            <h3 class="visually-hidden">Ассортимент</h3>
         	<ul class="product">
         		<li class="product">		
         			<a href="#"><h3 class="product">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3></a>
@@ -238,6 +245,7 @@
         		</li>
         	</ul>
         </section>
+        <h3 class="visually-hidden">Скролл страниц каталога</h3>
         <div class="product-list">
         	<ul class="product-list-display">
                 <li><a href="#">Назад</a></li>
@@ -251,6 +259,7 @@
         </div>
     </main>
         <footer>
+            <h3 class="visually-hidden">Подпишитесь на нас в соц.сетях</h3>
             <ul class="socialmedia">
                 <li><a class="social tweeter" href="#">Tweeter</a></li>
                 <li><a class="social instagram" href="#">Instagram</a></li>
