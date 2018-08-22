@@ -3,20 +3,21 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Глейси-меню</title>
-	<link rel="stylesheet" type="text/css" href="css/style">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<header class="main-header">
-        <div class="main-header-logo">
-            <a href="index.html">
-               <img src="img/mainlogo.svg" width="154" height="64" alt="Логотип магазина мороженнного GlaccyShop">
-            </a>
-        </div>
+            <div class="main-header-logo">
+                <a>
+                    <img src="img/mainlogo.svg" width="154" height="64" alt="Логотип магазина мороженнного GlaccyShop">
+                </a>
+            </div>
             <nav class="main-navigation">
                 <ul class="site-navigation">
-                    <li>
-                        <a href="catalog.html">Каталог</a>
-                        <div class="menu-catalog hidden">
+                    <li class="menu">
+                        <a class="main-item menu-list" href="catalog.html">Каталог</a>
+                        <div class="menu-drop">
                             <p>Новинки</p>
                             <ul>
                                 <li><a href="catalog.html">Сливочное</a></li>
@@ -26,8 +27,8 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="delivery.html">Доставка и оплата</a></li>
-                    <li><a href="about.html">О компании</a></li>
+                    <li><a class="main-item" href="delivery.html">Доставка и оплата</a></li>
+                    <li><a class="main-item" href="about.html">О компании</a></li>
                 </ul>
                 <ul class="user-navigation">
                     <li class="search">
@@ -43,11 +44,11 @@
                     <li class="login">
                         <a href="#">Вход</a>
                         <section>
-                            <h3 class="visually-hidden">Форма входа</h3>
+                            <h3 class="visually-hidden">Форма Входа</h3>
                             <form id="login-form" action="https://echo.htmlacademy.ru" method="post">
                                 <p>
                                     <label class="visually-hidden" for="user-login">Логин</label>
-                                    <input id="user-login" type="text" name="login" placeholder="Электронная почта">
+                                    <input id="user-login" type="email" name="login" placeholder="Электронная почта">
                                 </p>
                                 <p>
                                     <label class="visually-hidden" for="user-password">Пароль</label>
@@ -264,7 +265,7 @@
         <footer>
             <h3 class="visually-hidden">Подпишитесь на нас в соц.сетях</h3>
             <ul class="socialmedia">
-                <li><a class="social twitter" href="#"><span class="visually-hidden">Twitter</span></a></li>
+               <li><a class="social twitter" href="#"><span class="visually-hidden">Twitter</span></a></li>
                 <li><a class="social instagram" href="#"><span class="visually-hidden">Instagram</span></a></li>
                 <li><a class="social facebook" href="#"><span class="visually-hidden">Facebook</span></a></li>
                 <li><a class="social vk" href="#"><span class="visually-hidden">Vkontakte</span></a></li>
@@ -279,10 +280,11 @@
             </div>
             <div class="footer-copyright">
                 <a href="https://htmlacademy.ru/intensive/htmlcss" class="copyright-logo">
-                    <img src="img/html-academy-logo.svg" width="108" height="39" alt="Логотип HTML-Академии">
+                    <img src="img/html-academy-logo.svg" width="128" height="39" alt="Логотип HTML-Академии">
                 </a>
                 <p>Сделанно в <a href="https://htmlacademy.ru/">HTML Academy</a> © 2017</p>
             </div>
         </footer>
+    </div>
 </body>
 </html>

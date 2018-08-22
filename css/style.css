@@ -1,3 +1,5 @@
+/*КОД НАЧИНАЕТСЯ С 345 СТРОКИ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -340,52 +342,185 @@ template {
   display: none;
 }
 
-/* Основной проект
+/* ПРОЕКТ 
    ========================================================================== */
-
+/* Глобальные селекторы
+   ========================================================================== */
 
 body{
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
-	line-height: 24px;
+	line-height: 18px;
 	font-weight: 700;
 	background-color: #849d8f;
 	color: #ffffff;
 	width: 1200px;
 }
 
+/*.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}*/
+
+
 a{
 	text-decoration: none;
 	color: #ffffff;
 }
+
+/*.hidden{
+  display: none;
+}*/
+
+.mainbtn{
+  font: inherit;
+  text-align: center;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  border-radius: 40px;
+  color:#ffffff;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+  border: none;
+  text-transform: uppercase;
+}
+
+
+
+/* Хедер
+   ========================================================================== */
+
 
 .user-navigation li, 
 .site-navigation  li{
   list-style: none;
 }
 
-.site-navigation > li > a{
-	vertical-align: center;
-	border-bottom: 1px solid #b1c9bb;
+.site-navigation > li{
+  margin:15px;
+  display: inline-block;
+}
+.main-item{
+  display: block;
+  vertical-align: center;
+  text-decoration: underline;  /*Я не знаю, как тут сделать тени из макета, я уже перепробывал 100500 способов*/
+  text-decoration-color: #b2cabd;
+	/*box-shadow:                
+  inset 0 -20px 1px #849d8f,
+  inset 0px 1px #b2cabd;*/
+  padding: 9px 14px 10px 13px;
 } 
 
-.site-navigation > li > a:hover{
+.main-item:hover{
 	background-color: #f7f6f3;
-	border-bottom: none;
-	padding: 9px 14px 10px 13px;
+  text-decoration: none;
 	color: #323232;
-	border-radius: 5%;
+	border-radius: 25px;
 }
 
 .working-time p:last-child{
 	font-size: 22px;
 }
 
+/* Меню хедера
+   ========================================================================== */
+
+.menu-drop{
+  display: none;
+  position: absolute;
+  width: 143px;
+  height: 171px;
+  right: 7px;
+  width: 143px;
+  height: 171px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  background-color: #f8f7f4;
+  color:#323232;
+  text-align: left;
+}   
+
+.menu-drop p{
+  display: block;
+  width: 121px;
+  border-bottom: 1px solid #d1d0ce; 
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 17px;
+  margin-bottom: 0px;
+  margin-left: 6px;
+}
+.menu-drop li{
+  padding: 0px;
+  margin-left:-40px;
+}
+.menu-drop a{
+  display: block;
+  color: inherit;
+  width: 123px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left:21px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.menu-drop a:hover{
+  background-color: #fbded7;
+}
+.menu-drop a:active{ 
+  background-color: #f6b5a5;
+}
+.menu-list:hover .menu-drop{
+  display: block;
+  position: relative;  /*Не знаю в чем проблема, не хочет всплывать меню при наведении*/
+}
+/* Навигация пользователя
+   ========================================================================== */
+.search input[type="search"]{
+  width: 311px;
+  height: 44px;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+.login input[type="email"],
+.login input[type="password"]{
+  width: 241px;
+  height: 44px;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+.search input[type="search"]::placeholder,
+.login input[type="email"]::placeholder,
+.login input[type="password"]::placeholder{
+  padding-left: 15px;
+}
+
+
+
+
+
+
+/* Стили главной страницы(|INDEX|) и каталога(|CATALOG")
+   ========================================================================== */
+
+/* Слайдер |INDEX|
+   ========================================================================== */
+
 .slider-item{
 	list-style: none;
 }
+
+/* Бонусы при покупке |INDEX|
+   ========================================================================== */
 
 .special h3{
 	font-size: 35px;
@@ -395,42 +530,37 @@ a{
 	font-size: 18px;
 }
 
-.special-offer2{
+.special-offer1{
 	background-color: #41271a;
 	background-image: url(../img/chocolatebg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
   width: 560px;
   height: 229px;
+  border-radius: 15px;
 }
 
-.special-offer1{
+.special-offer2{
 	background-color: #af2d4d;
 	background-image: url(../img/raspberriesbg.jpg);
 	background-size: cover;
 	background-repeat:no-repeat;
   width: 560px;
   height: 229px;
+  border-radius: 15px;
 }
+/* Товар |INDEX| |CATALOG|
+   ========================================================================== */
 .product{
 	list-style: none;
 }
-
+.product img{
+  border-radius: 50%;
+}
 .product-description {
 	font-size: inherit;
   font-weight: 500;
 	border-bottom: 1px solid #b1c9bb;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .product-price{
@@ -440,7 +570,8 @@ a{
 .product-price span{
 	font-size: 30px;
 }
-
+/* Преймущества |INDEX|
+   ========================================================================== */
 .advantages{
 	background-color: #e8dbbe;
 	background-image: url(../img/waffelbg.jpg);
@@ -448,6 +579,7 @@ a{
 	color: #323232;
   width: 1146px;
   height: 306px;
+  border-radius: 15px;
 }
 
 .advantages-description {
@@ -485,13 +617,15 @@ a{
 	font-size: 24px;
   font-weight: 500;
 }
-
+/* Блог и подписка |INDEX|
+   ========================================================================== */
 .blog{
   background-color: #ffffff;
   background-image: url(../img/Blogbg.jpg);
   background-size:cover;
   width:560px;
   height: 220px;
+  border-radius: 15px;
 }
 
 .blog  p{
@@ -505,6 +639,16 @@ a{
   text-decoration: underline;
   color: #323232;
 }
+.subscription input[type="email"]{
+  width: 368px;
+  height: 44px;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+.subscription input[type="email"]::placeholder{
+  padding-left: 15px;
+}
 .subscription{
   font-size: 16px;
   font-weight: 400;
@@ -512,21 +656,59 @@ a{
   width: 549px;
   height: 211px;
   background-color: #f8f7f4;
+  border-radius: 15px;
 }
-
+/* Адресс и карта |INDEX|
+   ========================================================================== */
 .adress{
   width: 302px;
   height: 305px;
   background-color: #ffffff;
   color: #323232;
+  border-radius: 15px;
+}
+/* Обратная связь |INDEX|
+   ========================================================================== */
+.feedback input[type="text"],
+.feedback input[type="email"]{
+  width: 267px;
+  height: 44px;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+.feedback textarea{
+width: 428px;
+height: 155px;
+border: 1px solid rgba(178, 178, 178, 0.52);
+border-radius: 5px;
+background-color: #ffffff;
+}
+.feedback input[type="text"]::placeholder,
+.feedback input[type="email"]::placeholder{
+  padding-left: 15px;
+}
+.feedback textarea::placeholder{
+  padding-left: 15px;
+  padding-top: 13px;
 }
 
-.footer-info li > a{
+/* ФУТЕР
+   ========================================================================== */
+.socialmedia li,
+.footer-info li{
+  list-style: none;
+}
+
+
+.footer-info a{
   font-size: 13px;
   font-weight: 400;
-  border-bottom: 1px solid #b1c9bb;
+  text-decoration:underline;
+  text-decoration-color: #b1c9bb;
 }
-.footer-info li:first-child > a{
+
+.footer-info li:first-child{
   font-weight: 700;
 }
 
@@ -535,25 +717,9 @@ a{
   font-weight: 400;
 }
 
-.footer-copyright p a{
-  border-bottom: 1px solid #b1c9bb;
+.footer-copyright a{
+  text-decoration:underline;
+  text-decoration-color: #b1c9bb;
 }
 
 
-
-.hidden{
-	display: none;
-}
-
-.mainbtn{
-	font: inherit;
-    text-align: center;
-    text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
-    border-radius: 40px;
-    color:#ffffff;
-	box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
-    background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
-    border: none;
-    text-transform: uppercase;
-    padding:;
-}
