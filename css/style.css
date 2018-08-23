@@ -148,10 +148,10 @@ template {
 /* Глобальные селекторы
    ========================================================================== */
 
-body{
+body {
 	margin: 0;
 	padding: 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto','Tahoma', sans-serif;
 	background-color: #849d8f;
 	color: #ffffff;
 	width: 1200px;
@@ -160,7 +160,7 @@ body{
   line-height: 18px;
 }
 
-/*.visually-hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -169,19 +169,19 @@ body{
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-}*/
+}
 
 
-a{
+a {
 	text-decoration: none;
 	color: #ffffff;
 }
 
-/*.hidden{
+.hidden {
   display: none;
-}*/
+}
 
-.mainbtn{
+.btn {
   font: inherit;
   text-align: center;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
@@ -196,15 +196,15 @@ a{
   line-height: 24px;
 }
 
-.mainbtn:hover,
-.mainbtn:focus{
+.btn:hover,
+.btn:focus {
   box-shadow: 0 2px 2px #ac1000;
   background-color: rgba(255, 255, 255, 0.2);
   background-color: #ffffff;
   background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
 }
 
-.mainbtn:active{
+.btn:active {
   box-shadow: inset 0 2px 2px #942718;
   background-color: rgba(0, 0, 0, 0.07);
   background-color: #ffffff;
@@ -216,16 +216,16 @@ a{
 
 
 .user-navigation li, 
-.site-navigation  li{
+.site-navigation  li {
   list-style: none;
 }
 
-.site-navigation > li{
+.site-navigation > li {
   margin:15px;
   display: inline-block;
 }
 
-.site-navigation-item{
+.site-navigation-item {
   display: block;
   vertical-align: center;
   text-decoration: underline;  /*Я не знаю, как тут сделать тени из макета, я уже перепробывал 100500 способов*/
@@ -236,8 +236,8 @@ a{
   padding: 9px 14px 10px 13px;
 } 
 
-.site-navigation-item:hover,
-.site-navigation-item:focus{
+.site-navigation-item :hover,
+.site-navigation-item :focus {
   display: block;
   vertical-align: center;
 	background-color: #f7f6f3;
@@ -246,22 +246,22 @@ a{
 	border-radius: 25px;
 }
 
-.site-navigation-item-onpage{
+.site-navigation-item-current {
   background-color: #d07058;
   border-radius: 25px;
   padding: 9px 14px 10px 13px;
 }
 
 .site-navigation-item:active,
-.site-navigation-item-onpage:active{
+.site-navigation-item-current:active {
   box-shadow: inset 0 2px 1px #696969;
 }
 
 /* Меню хедера
    ========================================================================== */
 
-.menu-drop{
-  position: absolute;
+.menu-drop {
+  /*position: absolute;*/
   width: 143px;
   height: 171px;
   bottom: 11px;
@@ -273,11 +273,10 @@ a{
   background-color: #f8f7f4;
   color:#323232;
   text-align: left;
-  opacity: 0;
   line-height: 16px;
 }   
 
-.menu-drop p{
+.menu-drop p {
   display: block;
   width: 121px;
   border-bottom: 1px solid #d1d0ce; 
@@ -288,12 +287,12 @@ a{
   margin-left: 6px;
 }
 
-.menu-drop li{
+.menu-drop li {
   padding: 0px;
   margin-left:-40px;
 }
 
-.menu-drop a{
+.menu-drop a {
   display: block;
   color: inherit;
   width: 123px;
@@ -304,20 +303,20 @@ a{
   font-weight: 400;
 }
 
-.onpage1{
+.menu-drop-current {
   background-color: #d07058;
 }
 
-.menu-drop a:hover,
-.menu-drop a:focus{
+.menu-drop a :hover,
+.menu-drop a :focus {
   background-color: #fbded7;
 }
 
-.menu-drop a:active{ 
+.menu-drop a :active { 
   background-color: #f6b5a5;
 }
-.menu-list > a:hover + .menu-drop,
-.menu-list > a:focus + .menu-drop{
+.site-navigation-item :hover + .menu-drop,
+.site-navigation-item :focus + .menu-drop{
   opacity: 1;
   position: relative;  
 }
@@ -327,7 +326,7 @@ a{
 /* Навигация пользователя
    ========================================================================== */
 
-.working-time p:first-child{
+.working-time p:first-child {
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
@@ -337,7 +336,14 @@ a{
 /* Поиск
    ========================================================================== */
 
-.search input[type="search"]{
+.search {
+  width: 341px;
+  height: 84px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+}
+
+.search input[type="search"] {
   width: 311px;
   height: 44px;
   border: 1px solid #d3d3d2;
@@ -351,8 +357,15 @@ a{
 /* Логин
    ========================================================================== */
 
+.login {
+  width: 277px;
+  height: 214px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+}
+
 .login input[type="email"],
-.login input[type="password"]{
+.login input[type="password"] {
   width: 241px;
   height: 44px;
   border: 1px solid #d3d3d2;
@@ -373,13 +386,13 @@ a{
   text-decoration-color: #aeadab;
 }
 
-.login > a{
+.login > a {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
 }
 
-.logbtn{
+.login-btn {
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
@@ -387,27 +400,34 @@ a{
 
 /* Корзина
    ========================================================================== */
+.cart,
+.full-cart {
+  width: 540px;
+  height: 242px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+}
 
-.chart > a, 
-.fullchart > a{
+.cart > a, 
+.full-cart > a {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
 }
 
-.fullchart{
+.full-cart {
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
 }
 
-.fullchart > p{
+.full-chart > p {
   font-size: 15px;
   font-weight: 700;
   line-height: 18px;
 }
 
-.working-time p:last-child{
+.working-time p :last-child {
   font-size: 22px;
   font-weight: 700;
   line-height: 16px;
@@ -417,20 +437,46 @@ a{
 /* Стили главной страницы(|INDEX|) и каталога(|CATALOG|)
    ========================================================================== */
 
+/* Сортировка (|CATALOG|)
+   ========================================================================== */
+.sort {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.sort-price{
+  background-color: #ffffff;
+}
+
+.sort-fat{
+  background-color: #ffffff;
+}
+
+.sort-inside{
+  background-color: #ffffff;
+}
+
+.sort-btn{  
+  width: 144px;
+  height: 37px;
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+}
 /* Слайдер |INDEX|
    ========================================================================== */
 
-.slider-item{
+.slider-item {
 	list-style: none;
 }
 
-.slider-item p{
+.slider-item p {
   font-size: 60px;
   font-weight: 700;
   line-height: 60.35px;
 }
 
-.slider-item b{
+.slider-item a {
   font-size: 32px;
   font-weight: 700;
   line-height: 44px;
@@ -440,21 +486,21 @@ a{
 /* Бонусы при покупке |INDEX|
    ========================================================================== */
 
-.special h3{
+.special h3 {
 	font-size: 35px;
   font-weight: 700;
   line-height: 41px;
 }
 
-.special p{
+.special p {
 	font-size: 18px;
   font-weight: 700;
   line-height: 22px;
 }
 
-.special-offer1{
-	background-color: #41271a;
-	background-image: url(../img/chocolatebg.jpg);
+.special-offer1 {
+	background-image: url(../img/raspberriesbg.jpg);
+  background-color: #af2d4d;
 	background-size: cover;
 	background-repeat: no-repeat;
   width: 560px;
@@ -462,9 +508,9 @@ a{
   border-radius: 15px;
 }
 
-.special-offer2{
-	background-color: #af2d4d;
-	background-image: url(../img/raspberriesbg.jpg);
+.special-offer2 {
+	background-image: url(../img/chocolatebg.jpg);
+  background-color: #41271a;
 	background-size: cover;
 	background-repeat:no-repeat;
   width: 560px;
@@ -475,11 +521,11 @@ a{
 /* Товар |INDEX| |CATALOG|
    ========================================================================== */
 
-.product{
+.product {
 	list-style: none;
 }
 
-.product img{
+.product img {
   border-radius: 50%;
 }
 
@@ -489,21 +535,20 @@ a{
 	border-bottom: 1px solid #b1c9bb;
 }
 
-.product-price{
+.product-price {
 	font-size: 45px;
   font-weight: 700;
   line-height: 45px;
-  letter-spacing:
 }
 
-.product-price span{
+.product-price span {
 	font-size: 30px;
 }
 
 /* Преймущества |INDEX|
    ========================================================================== */
 
-.advantages{
+.advantages {
 	background-color: #e8dbbe;
 	background-image: url(../img/waffelbg.jpg);
 	list-style: none;
@@ -513,7 +558,7 @@ a{
   border-radius: 15px;
 }
 
-.advanmtages-aboute{
+.advanmtages-aboute {
   font-size: 24px;
   font-weight: 500;
   line-height: 30px;
@@ -526,26 +571,26 @@ a{
   line-height: 22px;
 }
 
-/*.advantages-description li:nth-child(1):before{
+/*.advantages-description li:nth-child(1):before {
 	width: 48px;
 	height: 48px;
 	background-image: url(../img/icecream.svg);
 	background-repeat: no-repeat;
 }
 
-.advantages-description li:nth-child(2):before{
+.advantages-description li:nth-child(2):before {
 	width: 48px;
 	height: 48px;
 	background-image: url(../img/leaf.svg);
 	background-repeat: no-repeat;
 }
-.advantages-description li:nth-child(3):before{
+.advantages-description li:nth-child(3):before {
 	width: 48px;
 	height: 48px;
 	background-image: url(../img/cow.svg);
 	background-repeat: no-repeat;
 }
-.advantages-description li:nth-child(4):before{
+.advantages-description li:nth-child(4):before {
 	width: 48px;
 	height: 48px;
 	background-image: url(../img/temperature.svg.svg);
@@ -555,7 +600,7 @@ a{
 /* Блог и подписка |INDEX|
    ========================================================================== */
 
-.blog{
+.blog {
   background-color: #ffffff;
   background-image: url(../img/Blogbg.jpg);
   background-size:cover;
@@ -564,14 +609,14 @@ a{
   border-radius: 15px;
 }
 
-.blog  p{
+.blog  p {
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
   color: #323232;
 }
 
-.blog  b{
+.blog  b {
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
@@ -580,7 +625,7 @@ a{
   text-decoration-color: #323232;
 }
 
-.subscription{
+.subscription {
  font-size: 16px;
   font-weight: 400;
   line-height: 22px;
@@ -591,7 +636,7 @@ a{
   border-radius: 15px;
 }
 
-.subscription input[type="email"]{
+.subscription input[type="email"] {
   width: 368px;
   height: 44px;
   border: 1px solid rgba(178, 178, 178, 0.52);
@@ -606,7 +651,7 @@ a{
 /* Адресс и карта |INDEX|
    ========================================================================== */
 
-.adress{
+.adress {
   width: 302px;
   height: 305px;
   background-color: #ffffff;
@@ -614,13 +659,13 @@ a{
   border-radius: 15px;
 }
 
-.adress p{
+.adress p {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
 }
 
-.adress b{
+.adress b {
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
@@ -628,7 +673,7 @@ a{
 
 /* Обратная связь |INDEX|
    ========================================================================== */
-.feedback legend{
+.feedback p {
   font-size: 24px;
   font-weight: 500;
   line-height: 28px;
@@ -636,7 +681,7 @@ a{
 }
 
 .feedback input[type="text"],
-.feedback input[type="email"]{
+.feedback input[type="email"] {
   width: 267px;
   height: 44px;
   border: 1px solid rgba(178, 178, 178, 0.52);
@@ -648,7 +693,7 @@ a{
   line-height: 24px;
 }
 
-.feedback textarea{
+.feedback textarea {
   width: 428px;
   height: 155px;
   border: 1px solid rgba(178, 178, 178, 0.52);
@@ -674,8 +719,8 @@ a{
 /* ФУТЕР
    ========================================================================== */
 
-.socialmedia li,
-.footer-info li{
+.social-media li,
+.footer-info li {
   list-style: none;
 }
 
@@ -688,17 +733,17 @@ a{
   text-decoration-color: #b1c9bb;
 }
 
-.footer-info li:first-child{
+.footer-info li :first-child{
   font-weight: 700;
 }
 
-.footer-copyright p{
+.footer-copyright p {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
 }
 
-.footer-copyright a{
+.footer-copyright a {
   text-decoration:underline;
   text-decoration-color: #b1c9bb;
 }
