@@ -211,6 +211,8 @@ a {
   background-image: linear-gradient(to top, #f26843 0%, #e74a35 100%);
 }
 
+
+
 /* Хедер
    ========================================================================== */
 
@@ -222,7 +224,7 @@ a {
 
 .site-navigation > li {
   margin:15px;
-  display: inline-block;
+  display: flex;
 }
 
 .site-navigation-item {
@@ -234,16 +236,17 @@ a {
   inset 0 -20px 1px #849d8f,
   inset 0px 1px #b2cabd;*/
   padding: 9px 14px 10px 13px;
+  white-space: nowrap;
+  border-radius: 15px;
 } 
 
-.site-navigation-item :hover,
-.site-navigation-item :focus {
-  display: block;
+.site-navigation-item .menu-list,
+.site-navigation-item:hover,
+.site-navigation-item:focus {
   vertical-align: center;
 	background-color: #f7f6f3;
   text-decoration: none;
 	color: #323232;
-	border-radius: 25px;
 }
 
 .site-navigation-item-current {
@@ -257,15 +260,33 @@ a {
   box-shadow: inset 0 2px 1px #696969;
 }
 
+.user-navigation-item{
+  color: #ffffff;
+  background-color: #a1b4a9;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.user-navigation-item:hover,
+.user-navigation-item:focus {
+  background-color: #f7f6f3;
+  color: #323232;
+  opacity: 1;
+}
+
 /* Меню хедера
    ========================================================================== */
+.menu-list{
+  padding-bottom: 5px;
+}
 
 .menu-drop {
-  /*position: absolute;*/
+  position: absolute;
+  display: none;
+  top: 21px;
+  left: 181px;
   width: 143px;
   height: 171px;
-  bottom: 11px;
-  right: 7px;
   width: 143px;
   height: 171px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
@@ -307,18 +328,18 @@ a {
   background-color: #d07058;
 }
 
-.menu-drop a :hover,
-.menu-drop a :focus {
+.menu-drop a:hover,
+.menu-drop a:focus {
   background-color: #fbded7;
 }
 
-.menu-drop a :active { 
+.menu-drop a:active { 
   background-color: #f6b5a5;
 }
-.site-navigation-item :hover + .menu-drop,
-.site-navigation-item :focus + .menu-drop{
-  opacity: 1;
-  position: relative;  
+.menu-list:hover .menu-drop,
+.site-navigation-item:hover + .menu-drop, 
+.site-navigation-item:focus + .menu-drop {
+  display: block;
 }
 
 
@@ -336,9 +357,10 @@ a {
 /* Поиск
    ========================================================================== */
 
-.search {
-  /*width: 341px;
-  height: 84px;*/
+.search section {
+  border-radius: 5px;
+  width: 341px;
+  height: 84px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
 }
@@ -357,9 +379,10 @@ a {
 /* Логин
    ========================================================================== */
 
-.login {
- /* width: 277px;
-  height: 214px;*/
+.login section{
+  border-radius: 5px;
+  width: 277px;
+  height: 214px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
 }
@@ -400,10 +423,8 @@ a {
 
 /* Корзина
    ========================================================================== */
-.cart,
-.full-cart {
- /* width: 540px;
-  height: 242px;*/
+.full-cart section{
+  border-radius: 5px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
 }
@@ -416,6 +437,7 @@ a {
 }
 
 .full-cart {
+  color: #323232;
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
@@ -426,8 +448,11 @@ a {
   font-weight: 700;
   line-height: 18px;
 }
+.full-cart  span{
+  color: #999999;
+}
 
-.working-time p :last-child {
+.working-time p:last-child {
   font-size: 22px;
   font-weight: 700;
   line-height: 16px;
@@ -443,25 +468,26 @@ a {
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
+  color: #ffffff;
 }
 
 .sort-price{
-  background-color: #ffffff;
+  background-color: #a8b9b0;
 }
 
 .sort-fat{
-  background-color: #ffffff;
+  background-color: #a8b9b0;
 }
 
 .sort-inside{
-  background-color: #ffffff;
+  background-color: #a8b9b0;
 }
 
 .sort-btn{  
   width: 144px;
   height: 37px;
   border: 2px solid #ffffff;
-  background-color: #ffffff;
+  background-color: #a8b9b0;
 }
 /* Слайдер |INDEX|
    ========================================================================== */
@@ -733,7 +759,7 @@ a {
   text-decoration-color: #b1c9bb;
 }
 
-.footer-info li :first-child{
+.footer-info li:first-child{
   font-weight: 700;
 }
 
