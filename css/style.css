@@ -1,121 +1,46 @@
-/*КОД НАЧИНАЕТСЯ С 345 СТРОКИ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
+/*КОД НАЧИНАЕТСЯ С 148 СТРОКИ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
-
-/* Document
-   ========================================================================== */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
-
-/* Sections
-   ========================================================================== */
-
-/**
- * Remove the margin in all browsers.
- */
-
 body {
   margin: 0;
 }
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-
-/* Grouping content
-   ========================================================================== */
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-
 hr {
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
 }
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
 pre {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
-
-/* Text-level semantics
-   ========================================================================== */
-
-/**
- * Remove the gray background on active links in IE 10.
- */
-
 a {
   background-color: transparent;
 }
-
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
   text-decoration: underline dotted; /* 2 */
 }
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-
 b,
 strong {
   font-weight: bolder;
 }
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
 code,
 kbd,
 samp {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
-
-/**
- * Add the correct font size in all browsers.
- */
-
 small {
   font-size: 80%;
 }
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-
 sub,
 sup {
   font-size: 75%;
@@ -123,34 +48,15 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
-
 sub {
   bottom: -0.25em;
 }
-
 sup {
   top: -0.5em;
 }
-
-/* Embedded content
-   ========================================================================== */
-
-/**
- * Remove the border on images inside links in IE 10.
- */
-
 img {
   border-style: none;
 }
-
-/* Forms
-   ========================================================================== */
-
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-
 button,
 input,
 optgroup,
@@ -161,42 +67,20 @@ textarea {
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
 }
-
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-
 button,
 input { /* 1 */
   overflow: visible;
 }
-
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-
 button,
 select { /* 1 */
   text-transform: none;
 }
-
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-
 button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
 }
-
-/**
- * Remove the inner border and padding in Firefox.
- */
-
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -204,33 +88,15 @@ button::-moz-focus-inner,
   border-style: none;
   padding: 0;
 }
-
-/**
- * Restore the focus styles unset by the previous rule.
- */
-
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
-
-/**
- * Correct the padding in Firefox.
- */
-
 fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
-
 legend {
   box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
@@ -239,109 +105,44 @@ legend {
   padding: 0; /* 3 */
   white-space: normal; /* 1 */
 }
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-
 progress {
   vertical-align: baseline;
 }
-
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
-
 textarea {
   overflow: auto;
 }
-
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-
 [type="checkbox"],
 [type="radio"] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-
 [type="search"] {
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
-
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-
 ::-webkit-file-upload-button {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
-
-/* Interactive
-   ========================================================================== */
-
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-
 details {
   display: block;
 }
-
-/*
- * Add the correct display in all browsers.
- */
-
 summary {
   display: list-item;
 }
-
-/* Misc
-   ========================================================================== */
-
-/**
- * Add the correct display in IE 10+.
- */
-
 template {
   display: none;
 }
-
-/**
- * Add the correct display in IE 10.
- */
-
 [hidden] {
   display: none;
 }
-
 /* ПРОЕКТ 
    ========================================================================== */
 /* Глобальные селекторы
@@ -351,12 +152,12 @@ body{
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	line-height: 18px;
-	font-weight: 700;
 	background-color: #849d8f;
 	color: #ffffff;
 	width: 1200px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
 }
 
 /*.visually-hidden {
@@ -390,9 +191,10 @@ a{
   background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
   border: none;
   text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
 }
-
-
 
 /* Хедер
    ========================================================================== */
@@ -407,7 +209,8 @@ a{
   margin:15px;
   display: inline-block;
 }
-.main-item{
+
+.site-navigation-item{
   display: block;
   vertical-align: center;
   text-decoration: underline;  /*Я не знаю, как тут сделать тени из макета, я уже перепробывал 100500 способов*/
@@ -418,25 +221,26 @@ a{
   padding: 9px 14px 10px 13px;
 } 
 
-.main-item:hover{
+.site-navigation-item:hover,
+.site-navigation-item:focus{
 	background-color: #f7f6f3;
   text-decoration: none;
 	color: #323232;
 	border-radius: 25px;
 }
 
-.working-time p:last-child{
-	font-size: 22px;
+.site-navigation-item:active{
+  box-shadow: inset 0 2px 1px #696969;
 }
 
 /* Меню хедера
    ========================================================================== */
 
 .menu-drop{
-  display: none;
   position: absolute;
   width: 143px;
   height: 171px;
+  bottom: 11px;
   right: 7px;
   width: 143px;
   height: 171px;
@@ -445,51 +249,78 @@ a{
   background-color: #f8f7f4;
   color:#323232;
   text-align: left;
+  opacity: 0;
+  line-height: 16px;
 }   
 
 .menu-drop p{
   display: block;
   width: 121px;
   border-bottom: 1px solid #d1d0ce; 
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   padding-left: 17px;
   margin-bottom: 0px;
   margin-left: 6px;
 }
+
 .menu-drop li{
   padding: 0px;
   margin-left:-40px;
 }
+
 .menu-drop a{
   display: block;
   color: inherit;
   width: 123px;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   padding-left:21px;
   font-size: 14px;
   font-weight: 400;
 }
-.menu-drop a:hover{
+
+.menu-drop a:hover,
+.menu-drop a:focus{
   background-color: #fbded7;
 }
+
 .menu-drop a:active{ 
   background-color: #f6b5a5;
 }
-.menu-list:hover .menu-drop{
-  display: block;
-  position: relative;  /*Не знаю в чем проблема, не хочет всплывать меню при наведении*/
+.menu-list > a:hover + .menu-drop,
+.menu-list > a:focus + .menu-drop{
+  opacity: 1;
+  position: relative;  
 }
+
 /* Навигация пользователя
    ========================================================================== */
+
+.working-time p:first-child{
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+
+/* Поиск
+   ========================================================================== */
+
 .search input[type="search"]{
   width: 311px;
   height: 44px;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
   background-color: #ffffff;
+  padding-left: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
 }
+/* Логин
+   ========================================================================== */
+
 .login input[type="email"],
 .login input[type="password"]{
   width: 241px;
@@ -497,19 +328,50 @@ a{
   border: 1px solid #d3d3d2;
   border-radius: 5px;
   background-color: #ffffff;
-}
-.search input[type="search"]::placeholder,
-.login input[type="email"]::placeholder,
-.login input[type="password"]::placeholder{
   padding-left: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
+.formlinks {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #323232;
+  text-decoration: underline;
+  text-decoration-color: #aeadab;
+}
 
+.login > a{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+}
 
+.logbtn{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
 
+/* Корзина
+   ========================================================================== */
 
+.chart > a, 
+.fullchart > a{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+}
 
-/* Стили главной страницы(|INDEX|) и каталога(|CATALOG")
+.working-time p:last-child{
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+/* Стили главной страницы(|INDEX|) и каталога(|CATALOG|)
    ========================================================================== */
 
 /* Слайдер |INDEX|
@@ -519,15 +381,32 @@ a{
 	list-style: none;
 }
 
+.slider-item p{
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 60.35px;
+}
+
+.slider-item b{
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+}
+
+
 /* Бонусы при покупке |INDEX|
    ========================================================================== */
 
 .special h3{
 	font-size: 35px;
+  font-weight: 700;
+  line-height: 41px;
 }
 
 .special p{
 	font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
 }
 
 .special-offer1{
@@ -549,14 +428,18 @@ a{
   height: 229px;
   border-radius: 15px;
 }
+
 /* Товар |INDEX| |CATALOG|
    ========================================================================== */
+
 .product{
 	list-style: none;
 }
+
 .product img{
   border-radius: 50%;
 }
+
 .product-description {
 	font-size: inherit;
   font-weight: 500;
@@ -565,13 +448,18 @@ a{
 
 .product-price{
 	font-size: 45px;
+  font-weight: 700;
+  line-height: 45px;
+  letter-spacing:
 }
 
 .product-price span{
 	font-size: 30px;
 }
+
 /* Преймущества |INDEX|
    ========================================================================== */
+
 .advantages{
 	background-color: #e8dbbe;
 	background-image: url(../img/waffelbg.jpg);
@@ -582,9 +470,17 @@ a{
   border-radius: 15px;
 }
 
+.advanmtages-aboute{
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
 .advantages-description {
 	list-style: none;
+  font-size: 16px;
   font-weight: 400;
+  line-height: 22px;
 }
 
 /*.advantages-description li:nth-child(1):before{
@@ -613,12 +509,9 @@ a{
 	background-repeat: no-repeat;
 }*/
 
-.advanmtages-aboute{
-	font-size: 24px;
-  font-weight: 500;
-}
 /* Блог и подписка |INDEX|
    ========================================================================== */
+
 .blog{
   background-color: #ffffff;
   background-image: url(../img/Blogbg.jpg);
@@ -631,35 +524,45 @@ a{
 .blog  p{
   font-size: 16px;
   font-weight: 500;
+  line-height: 22px;
   color: #323232;
 }
+
 .blog  b{
   font-size: 24px;
   font-weight: 700;
-  text-decoration: underline;
+  line-height: 30px;
   color: #323232;
+  text-decoration: underline;
+  text-decoration-color: #323232;
 }
-.subscription input[type="email"]{
-  width: 368px;
-  height: 44px;
-  border: 1px solid rgba(178, 178, 178, 0.52);
-  border-radius: 5px;
-  background-color: #ffffff;
-}
-.subscription input[type="email"]::placeholder{
-  padding-left: 15px;
-}
+
 .subscription{
-  font-size: 16px;
+ font-size: 16px;
   font-weight: 400;
+  line-height: 22px;
   color: #323232;
   width: 549px;
   height: 211px;
   background-color: #f8f7f4;
   border-radius: 15px;
 }
+
+.subscription input[type="email"]{
+  width: 368px;
+  height: 44px;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding-left: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
 /* Адресс и карта |INDEX|
    ========================================================================== */
+
 .adress{
   width: 302px;
   height: 305px;
@@ -667,8 +570,28 @@ a{
   color: #323232;
   border-radius: 15px;
 }
+
+.adress p{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.adress b{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
 /* Обратная связь |INDEX|
    ========================================================================== */
+.feedback legend{
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #323232;
+}
+
 .feedback input[type="text"],
 .feedback input[type="email"]{
   width: 267px;
@@ -676,25 +599,38 @@ a{
   border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 5px;
   background-color: #ffffff;
+  padding-left: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
+
 .feedback textarea{
-width: 428px;
-height: 155px;
-border: 1px solid rgba(178, 178, 178, 0.52);
-border-radius: 5px;
-background-color: #ffffff;
+  width: 428px;
+  height: 155px;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding-left: 15px;
+  padding-top: 13px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
-.feedback input[type="text"]::placeholder,
+
+/*.feedback input[type="text"]::placeholder,
 .feedback input[type="email"]::placeholder{
   padding-left: 15px;
 }
+
 .feedback textarea::placeholder{
   padding-left: 15px;
   padding-top: 13px;
-}
+}*/
 
 /* ФУТЕР
    ========================================================================== */
+
 .socialmedia li,
 .footer-info li{
   list-style: none;
@@ -704,6 +640,7 @@ background-color: #ffffff;
 .footer-info a{
   font-size: 13px;
   font-weight: 400;
+  line-height: 18px;
   text-decoration:underline;
   text-decoration-color: #b1c9bb;
 }
@@ -715,6 +652,7 @@ background-color: #ffffff;
 .footer-copyright p{
   font-size: 12px;
   font-weight: 400;
+  line-height: 18px;
 }
 
 .footer-copyright a{
