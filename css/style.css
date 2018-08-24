@@ -171,7 +171,6 @@ body {
   overflow: hidden;
 }
 
-
 a {
 	text-decoration: none;
 	color: #ffffff;
@@ -184,9 +183,8 @@ a {
 .btn {
   font: inherit;
   text-align: center;
-  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
   border-radius: 40px;
-  color:#ffffff;
+  color: #ffffff;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
   background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
   border: none;
@@ -223,23 +221,23 @@ a {
 }
 
 .site-navigation > li {
-  margin:15px;
+  margin: 15px;
   display: flex;
 }
 
 .site-navigation-item {
   display: block;
   vertical-align: center;
-  text-decoration: underline;  /*Я не знаю, как тут сделать тени из макета, я уже перепробывал 100500 способов*/
-  text-decoration-color: #b2cabd;
-	/*box-shadow:                
-  inset 0 -20px 1px #849d8f,
-  inset 0px 1px #b2cabd;*/
   padding: 9px 14px 10px 13px;
   white-space: nowrap;
   border-radius: 15px;
 } 
-
+.site-navigation-item::after{
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
 .site-navigation-item .menu-list,
 .site-navigation-item:hover,
 .site-navigation-item:focus {
@@ -262,7 +260,7 @@ a {
 
 .user-navigation-item{
   color: #ffffff;
-  background-color: #a1b4a9;
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
   text-align: center;
 }
@@ -472,23 +470,34 @@ a {
 }
 
 .sort-price{
-  background-color: #a8b9b0;
+  background-color: rgba(255, 255, 255, 0.2);;
 }
 
 .sort-fat{
-  background-color: #a8b9b0;
+  background-color: rgba(255, 255, 255, 0.2);;
 }
 
 .sort-inside{
-  background-color: #a8b9b0;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .sort-btn{  
   width: 144px;
   height: 37px;
   border: 2px solid #ffffff;
-  background-color: #a8b9b0;
+  background-color: rgba(255, 255, 255, 0.2);
 }
+
+.sort-btn:hover{
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.sort-btn:active{
+  box-shadow: inset 0 2px 1px #696969;
+  background-color: #ededed;
+}
+
 /* Слайдер |INDEX|
    ========================================================================== */
 
@@ -558,7 +567,12 @@ a {
 .product-description {
 	font-size: inherit;
   font-weight: 500;
-	border-bottom: 1px solid #b1c9bb;
+}
+.product-description::after{
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .product-price {
@@ -584,7 +598,7 @@ a {
   border-radius: 15px;
 }
 
-.advanmtages-aboute {
+.advantages-about {
   font-size: 24px;
   font-weight: 500;
   line-height: 30px;
@@ -629,13 +643,13 @@ a {
 .blog {
   background-color: #ffffff;
   background-image: url(../img/Blogbg.jpg);
-  background-size:cover;
-  width:560px;
+  background-size: cover;
+  width: 560px;
   height: 220px;
   border-radius: 15px;
 }
 
-.blog  p {
+.blog p {
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
@@ -745,8 +759,8 @@ a {
 /* ФУТЕР
    ========================================================================== */
 
-.social-media li,
-.footer-info li {
+.social-media,
+.footer-info {
   list-style: none;
 }
 
@@ -755,8 +769,12 @@ a {
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
-  text-decoration:underline;
-  text-decoration-color: #b1c9bb;
+}
+.footer-info a::after{
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .footer-info li:first-child{
