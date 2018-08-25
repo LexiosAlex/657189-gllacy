@@ -191,15 +191,14 @@ a {
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 24px;   
 }
 
 .btn:hover,
 .btn:focus {
   box-shadow: 0 2px 2px #ac1000;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-image: linear-gradient(to top, #ec6e5d 0%, #f58669 100%);
   background-color: #ffffff;
-  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
 }
 
 .btn:active {
@@ -208,8 +207,6 @@ a {
   background-color: #ffffff;
   background-image: linear-gradient(to top, #f26843 0%, #e74a35 100%);
 }
-
-
 
 /* Хедер
    ========================================================================== */
@@ -243,7 +240,6 @@ a {
 .site-navigation-item:focus {
   vertical-align: center;
 	background-color: #f7f6f3;
-  text-decoration: none;
 	color: #323232;
 }
 
@@ -374,6 +370,9 @@ a {
   font-weight: 400;
   line-height: 24px;
 }
+.search input[type="search"]:hover{
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
 /* Логин
    ========================================================================== */
 
@@ -397,6 +396,10 @@ a {
   font-weight: 400;
   line-height: 24px;
 }
+.login input[type="email"]:hover,
+.login input[type="password"]:hover{
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
 
 .formlinks {
   font-size: 13px;
@@ -404,7 +407,12 @@ a {
   line-height: 24px;
   color: #323232;
   text-decoration: underline;
-  text-decoration-color: #aeadab;
+}
+
+.formlinks:hover,
+.formlinks:focus,
+.formlinks:active{
+  color: #e84d37;
 }
 
 .login > a {
@@ -421,6 +429,11 @@ a {
 
 /* Корзина
    ========================================================================== */
+
+.full-cart{
+  color: #323232;
+}
+
 .full-cart section{
   border-radius: 5px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
@@ -434,20 +447,20 @@ a {
   line-height: 16px;
 }
 
-.full-cart {
-  color: #323232;
+.full-cart-items {
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
 }
 
-.full-chart > p {
+.full-cart-items span{
+  color: #999999;
+}
+
+.full-cart-final-price {
   font-size: 15px;
   font-weight: 700;
   line-height: 18px;
-}
-.full-cart  span{
-  color: #999999;
 }
 
 .working-time p:last-child {
@@ -469,12 +482,35 @@ a {
   color: #ffffff;
 }
 
+.sort-popularity select{
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border:none;
+}
+
+.sort-popularity select:hover{
+  background-color: #ffffff;
+  color:#323232;
+}
+
+.sort-popularity option{
+  background-color: #ffffff;
+  color: #323232;
+}
+
+.min-input,
+.max-input{
+  background-color: inherit;
+  color: #ffffff;
+  border:none;
+}
+
 .sort-price{
-  background-color: rgba(255, 255, 255, 0.2);;
+ color: #ffffff;
 }
 
 .sort-fat{
-  background-color: rgba(255, 255, 255, 0.2);;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .sort-inside{
@@ -486,6 +522,7 @@ a {
   height: 37px;
   border: 2px solid #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
 }
 
 .sort-btn:hover{
@@ -560,6 +597,10 @@ a {
 	list-style: none;
 }
 
+.product-btn{
+  display: none;
+}
+
 .product img {
   border-radius: 50%;
 }
@@ -579,10 +620,22 @@ a {
 	font-size: 45px;
   font-weight: 700;
   line-height: 45px;
+  text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 .product-price span {
 	font-size: 30px;
+}
+
+.product:hover,
+.product:focus{ 
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+.product:hover .product-btn,
+.product:hover + .product-btn,
+.product:focus + .product-btn{
+  display: block;
 }
 
 /* Преймущества |INDEX|
@@ -688,8 +741,19 @@ a {
   line-height: 24px;
 }
 
+.subscription input[type="email"]:hover {
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
 /* Адресс и карта |INDEX|
    ========================================================================== */
+.map-api{
+  display: block;
+  background-image: url(../img/map.jpg); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 430px;
+}
 
 .adress {
   width: 302px;
@@ -732,6 +796,10 @@ a {
   font-weight: 400;
   line-height: 24px;
 }
+.feedback input[type="text"]:hover,
+.feedback input[type="email"]:hover{
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
 
 .feedback textarea {
   width: 428px;
@@ -765,20 +833,31 @@ a {
 }
 
 
-.footer-info a{
+.footer-info-link{
+  display: block;
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
 }
-.footer-info a::after{
+.footer-info-link::after{
   content: "";
   display: block;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.footer-info li:first-child{
-  font-weight: 700;
+.footer-info-link:hover,
+.footer-info-link:focus{
+  color: #ffbc9e;
+}
+
+.footer-info-link:hover + .footer-info-link::after,
+.footer-info-link:focus + .footer-info-link::after{
+  background-color: #ffbc9e;
+}
+
+.provider{
+  font-weight: 700;  /*потом вставлю псевдоэлементом сердце*/
 }
 
 .footer-copyright p {
