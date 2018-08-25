@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>HTML Academy: Глейси-меню</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=latin,cyrillic" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	 <header class="main-header">
@@ -32,7 +32,7 @@
                 </ul>
                 <ul class="user-navigation">
                     <li class="search">
-                        <a href="#" class="user-navigation-item">Поиск</a>
+                        <a class="user-navigation-item" href="#" >Поиск</a>
                         <section>
                             <h3 class="visually-hidden">Форма поиска по сайту</h3>
                             <form action="https://echo.htmlacademy.ru">
@@ -42,7 +42,7 @@
                         </section>
                     </li> 
                     <li class="login">
-                        <a href="#" class="user-navigation-item">Вход</a>
+                        <a class="user-navigation-item" href="#">Вход</a>
                         <section>
                             <h3 class="visually-hidden">Форма Входа</h3>
                             <form id="login-form" action="https://echo.htmlacademy.ru" method="post">
@@ -56,8 +56,8 @@
                                 </p>
                                 <button class="btn login-btn" type="submit" form="login-form">Войти</button>
                                 <ul>
-                                    <li><a href="" class="formlinks pass-forgot">Забыли пароль?</a></li>
-                                    <li><a href="" class="formlinks new-user">Новая регистрация</a></li>
+                                    <li><a class="formlinks pass-forgot" href="">Забыли пароль?</a></li>
+                                    <li><a class="formlinks new-user" href="">Новая регистрация</a></li>
                                 </ul>
                             </form>
                         </section>
@@ -83,7 +83,7 @@
                                 </li>
                             </ul>
                         <p class="full-cart-final-price">Итого: 750 руб</p>
-                        <a href="" class="btn">Оформить заказ</a>
+                        <a class="btn" href="">Оформить заказ</a>
                         </section>
                     </li> 
                 </ul>
@@ -114,7 +114,7 @@
                 <legend>Цена:</legend>
                 <p class="sort-price">
                     <label class="visually-hidden" for="price-min">Минимальная цена:</label>
-                    <input id="price-min" type="text" class="min-input" value="100" name="price_min">
+                    <input class="min-input" id="price-min" type="text" value="100" name="price_min">
                     <span>руб. - </span>
                     <label class="visually-hidden" for="price-max">Максимальная цена:</label>
                     <input id="price-max" type="text" class="max-input" value="500" name="price_max">
@@ -279,7 +279,7 @@
             </ul>
             </div>
             <div class="footer-copyright">
-                <a href="https://htmlacademy.ru/intensive/htmlcss" class="copyright-logo">
+                <a class="copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss">
                     <img src="img/html-academy-logo.svg" width="128" height="39" alt="Логотип HTML-Академии">
                 </a>
                 <p>Сделанно в <a href="https://htmlacademy.ru/">HTML Academy</a> © 2017</p>
