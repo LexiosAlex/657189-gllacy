@@ -208,9 +208,43 @@ a {
     background-image: linear-gradient(to top, #f26843 0%, #e74a35 100%);
 }
 
+.site-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    width: 1200px;
+    margin: 0 auto;
+}
+
 /* Хедер
      ========================================================================== */
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    width: 1146px;
+}
+.header-left-column{
+    display: flex;
+    justify-content: space-between;
+}
 
+.site-navigation{
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-navigation{
+    display: flex;
+    justify-content: space-between;
+}
+
+.working-time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: none;
+}
 
 .user-navigation li,
 .site-navigation li {
@@ -218,7 +252,7 @@ a {
 }
 
 .site-navigation > li {
-    margin: 15px;
+    margin: 0px;
     display: flex;
 }
 
@@ -245,6 +279,7 @@ a {
     background-color: #d07058;
     border-radius: 25px;
     padding: 9px 14px 10px 13px;
+    margin: 0px;
 }
 
 .site-navigation-item:active,
@@ -535,12 +570,23 @@ a {
 
 /* Слайдер |INDEX|
      ========================================================================== */
+.slider{
+    display: flex;
+    align-items: center; /*не знаю, как должен работать слайдер, нужна помощь в разментке*/
+    width: 1146px;
+}
 
 .slider-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 	list-style: none;
 }
 
 .slider-item p {
+    display: flex;
+    text-align: center;
+    width: 670px;
     font-size: 60px;
     font-weight: 700;
     line-height: 60.35px;
@@ -558,8 +604,13 @@ a {
 
 /* Бонусы при покупке |INDEX|
      ========================================================================== */
+.special {
+    display: flex;
+    justify-content: space-around;
+}
 
 .special h3 {
+    display: flex;
 	font-size: 35px;
     font-weight: 700;
     line-height: 41px;
@@ -572,7 +623,10 @@ a {
 }
 
 .special-offer1 {
-	background-image: url("../img/raspberriesbg.jpg");
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+	background-image: url("../img/raspberriesbg.jpg");  /*Тут тоже небольшие проблемы из-за последнего блока*/
     background-color: #af2d4d;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -582,7 +636,10 @@ a {
 }
 
 .special-offer2 {
-	background-image: url("../img/chocolatebg.jpg");
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    background-image: url("../img/chocolatebg.jpg");
     background-color: #41271a;
 	background-size: cover;
 	background-repeat:no-repeat;
@@ -591,9 +648,18 @@ a {
     border-radius: 15px;
 }
 
+.special-btn{
+    align-self: flex-end;
+}
+
 /* Товар |INDEX| |CATALOG|
      ========================================================================== */
 
+.product-hits{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
 .product {
 	list-style: none;
 }
@@ -639,10 +705,13 @@ a {
     display: block;
 }
 
+
 /* Преймущества |INDEX|
      ========================================================================== */
 
 .advantages {
+    display: flex;
+    flex-direction: column;
 	background-color: #e8dbbe;
 	background-image: url("../img/waffelbg.jpg");
 	list-style: none;
@@ -658,11 +727,27 @@ a {
     line-height: 30px;
 }
 
-.advantages-description {
+.advantages-description li {
 	list-style: none;
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
+}
+.advantages-description{
+    display: flex;
+    justify-content: space-between;
+}
+
+.avantage-column-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.advantage-column-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /*.advantages-description li:nth-child(1):before {
@@ -693,6 +778,10 @@ a {
 
 /* Блог и подписка |INDEX|
      ========================================================================== */
+.news{
+    display: flex;
+    justify-content: space-around;
+}
 
 .blog {
     background-color: #ffffff;
@@ -749,7 +838,9 @@ a {
 /* Адресс и карта |INDEX|
      ========================================================================== */
 .map-api{
-    display: block;
+    display: flex;
+    vertical-align: middle;
+    flex-direction: row-reverse;
     background-image: url("../img/map.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -757,6 +848,7 @@ a {
 }
 
 .adress {
+    margin:27px;
     width: 302px;
     height: 305px;
     background-color: #ffffff;
@@ -827,6 +919,33 @@ a {
 
 /* ФУТЕР
      ========================================================================== */
+.main-footer{
+    display: flex;
+    justify-content: space-between;
+    width: 1146px;
+}
+
+.social-media{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-info-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer-copyright{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
 
 .social-media,
 .footer-info {

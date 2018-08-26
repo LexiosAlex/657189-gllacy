@@ -12,6 +12,7 @@
     <input class="visually-hidden" type="radio" id="slide-3" name="slider-control">
     <div class="site-wrapper">
   	    <header class="main-header">
+            <div class="header-left-column">
             <div class="main-header-logo">
                 <a>
                     <img src="img/mainlogo.svg" width="154" height="64" alt="Логотип магазина мороженнного GlaccyShop">
@@ -20,7 +21,7 @@
              <nav class="main-navigation">
                 <ul class="site-navigation">
                     <li class="menu menu-list">
-                        <a class="site-navigation-item-current">Каталог</a>
+                        <a class="site-navigation-item">Каталог</a>
                         <div class="menu-drop">
                             <p>Новинки</p>
                             <ul>
@@ -33,11 +34,13 @@
                     </li>
                     <li><a class="site-navigation-item" href="delivery.html">Доставка и оплата</a></li>
                     <li><a class="site-navigation-item" href="about.html">О компании</a></li>
+                    </div>
                 </ul>
+                <div class="header-right-column">
                 <ul class="user-navigation">
                     <li class="search">
                         <a class="user-navigation-item" href="#" >Поиск</a>
-                        <section>
+                        <section class="visually-hidden">
                             <h3 class="visually-hidden">Форма поиска по сайту</h3>
                             <form action="https://echo.htmlacademy.ru">
                                 <label class="visually-hidden" for="user-search">Поиск по сайту</label>
@@ -47,7 +50,7 @@
                     </li>
                     <li class="login">
                         <a class="user-navigation-item" href="#">Вход</a>
-                        <section>
+                        <section class="visually-hidden">
                             <h3 class="visually-hidden">Форма Входа</h3>
                             <form id="login-form" action="https://echo.htmlacademy.ru" method="post">
                                 <p>
@@ -75,6 +78,7 @@
                 <p>С 10 до 20, ежедневно</p>
                 <p>8 812 450-25-25</p>
             </div>
+        </div>
         </header>
   	    <main>
             <h1 class="visually-hidden">Магазин мороженного &laquo;Глейси&raquo;</h1>
@@ -108,12 +112,12 @@
         	   <div class="special-offer1">
         	        <h3>Малинка даром!</h3>
         	        <p>При покупке 2 кг любого фруктовго мороженного, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-        	        <a class="btn" href="сatalog.html">Хочу варенье!</a>
+        	        <a class="btn special-btn" href="сatalog.html">Хочу варенье!</a>
         	    </div>
                 <div class="special-offer2">
         	        <h3>Шоколадки даром!</h3>
         	        <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-        	        <a class="btn" href="catalog.html">Хочу шоколадки!</a>
+        	        <a class="btn special-btn" href="catalog.html">Хочу шоколадки!</a>
         	    </div>
             </div>
             <section class="hit">
@@ -149,10 +153,14 @@
                 <h2 class="visually-hidden">Наши преймущества</h2>
         	    <b class="advantages-about">Магазин Глэйси - это онлайн - и офлайн-магазин по продаже мороженного собственного производства на развес</b>
         	    <ul class="advantages-description">
-        		    <li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-                    <li>Для приготовления мороженого использубтся настоящие сливки и молоко высочайшего качества. Все дополнительные ингродиеты и добавки произведены из натурального, экологически чистого сырья.</li>
-                    <li>Закупка ингродиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество</li>
-                    <li>Доставка нашего мороженого до заказчиков осуществляется в специальном тепмопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+                    <div class="avantage-column-left">
+        		        <li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+                        <li>Для приготовления мороженого использубтся настоящие сливки и молоко высочайшего качества. Все дополнительные ингродиеты и добавки произведены из натурального, экологически чистого сырья.</li>
+                    </div>
+                    <div class="avantage-column-right">
+                        <li>Закупка ингродиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество</li>
+                        <li>Доставка нашего мороженого до заказчиков осуществляется в специальном тепмопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+                    </div>
         	    </ul>
             </section>
             <div class="news">
@@ -178,16 +186,16 @@
                 <h2 class="visually-hidden">Контактая информация</h2>
         	    <span class="map-api">
                     <img class="visually-hidden" src="img/map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+                    <div class="adress">
+                        <p>Адрес главного офиса и офлайн-магазина</p>
+                        <b>Ул.Большая Конюшенная 19/8, Санкт-Петербург</b>
+                        <br>
+                        <p>Для заказов по телефону:</p>
+                        <b>8 812 450-25-25</b>
+                        <p>(с 10 до 20 ежедневно)</p>
+                        <a class="btn" href="feedback-form">Форма обратной связи</a>
+                    </div>
                 </span>
-        	    <div class="adress">
-        		    <p>Адрес главного офиса и офлайн-магазина</p>
-        		    <b>Ул.Большая Конюшенная 19/8, Санкт-Петербург</b>
-        		    <br>
-        		    <p>Для заказов по телефону:</p>
-        		    <b>8 812 450-25-25</b>
-        		    <p>(с 10 до 20 ежедневно)</p>
-                    <a class="btn" href="feedback-form">Форма обратной связи</a>
-        	    </div>
             </section>
             <section class="feedback visually-hidden">
                 <h2 class="visually-hidden">Форма обратной связи</h2>
