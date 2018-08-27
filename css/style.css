@@ -154,7 +154,7 @@ body {
 	font-family: "Roboto","Tahoma", sans-serif;
 	background-color: #849d8f;
 	color: #ffffff;
-	min-width: 900px;
+	min-width: 860px;
     font-size: 16px;
     font-weight: 700;
     line-height: 18px;
@@ -213,27 +213,27 @@ a {
 .main-navigation{
     display: flex;
     flex-direction: row;
-    width: 975px;
+    width: 85%;
 }
 
 .container{
+    width: 1146px;
+    margin: 0px auto;
+    padding: 0px 20px;
+}
+
+.main-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 1146px;
-    margin: 0px auto;
-    padding: 0px;
 }
 
 .main-header-logo{
-    display: flex;
+    width: 13.5%;
     padding-top: 9px;
 }
 
 .main-header{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
     width:100%;
 }
 
@@ -246,13 +246,14 @@ a {
     margin-right: 100px;
     margin-top: 24px;
     margin-bottom: 20px;
+    margin-right: auto;
 }
 
 .user-navigation{
     justify-content: space-between;
     display: flex;
     width: 265px;
-    margin-left: auto;
+    margin-left: 0px none;
     margin-right: 0px none;
     padding: 0px;
     margin-top: 24px;
@@ -270,6 +271,7 @@ a {
 
 .working-time p{
     display: flex;
+    align-self: flex-end;
     padding: 0px;
     margin: 0px;
     margin-top: 8px;
@@ -643,9 +645,12 @@ a {
      ========================================================================== */
 .special {
     margin-top: 30px;
+    width: 100%;
+}
+
+.special-container{
     display: flex;
     justify-content: space-between;
-    width: 100%;
 }
 
 .special h3 {
@@ -868,9 +873,12 @@ a {
      ========================================================================== */
 .news{
     margin-top:40px;
+    width: 100%;
+}
+
+.news > .container{
     display: flex;
     justify-content: space-between;
-    width: 100%;
 }
 
 .blog {
@@ -1059,9 +1067,12 @@ a {
      ========================================================================== */
 .main-footer{
     margin-top: 20px;
+    width: 100%;
+}
+
+.main-footer > .container {
     display: flex;
     justify-content: space-between;
-    width: 1146px;
 }
 
 .social-media{
