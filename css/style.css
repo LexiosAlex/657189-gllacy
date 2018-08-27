@@ -154,7 +154,7 @@ body {
 	font-family: "Roboto","Tahoma", sans-serif;
 	background-color: #849d8f;
 	color: #ffffff;
-	width: 1200px;
+	min-width: 900px;
     font-size: 16px;
     font-weight: 700;
     line-height: 18px;
@@ -208,43 +208,73 @@ a {
     background-image: linear-gradient(to top, #f26843 0%, #e74a35 100%);
 }
 
-.site-wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items:center;
-    width: 1200px;
-    margin: 0 auto;
-}
-
 /* Хедер
      ========================================================================== */
-.main-header{
+.main-navigation{
     display: flex;
+    flex-direction: row;
+    width: 975px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 1146px;
+    margin: 0px auto;
+    padding: 0px;
 }
-.header-left-column{
+
+.main-header-logo{
     display: flex;
-    justify-content: space-between;
+    padding-top: 9px;
+}
+
+.main-header{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width:100%;
 }
 
 .site-navigation{
     display: flex;
     justify-content: space-between;
+    width: 385px;
+    margin: 0px;
+    padding: 0px;
+    margin-right: 100px;
+    margin-top: 24px;
+    margin-bottom: 20px;
 }
 
 .user-navigation{
-    display: flex;
     justify-content: space-between;
+    display: flex;
+    width: 265px;
+    margin-left: auto;
+    margin-right: 0px none;
+    padding: 0px;
+    margin-top: 24px;
+    margin-right: 15px;
+    margin-bottom: 20px;
 }
 
 .working-time{
     display: flex;
+    order: 1;
     flex-direction: column;
-    align-items: center;
-    padding-right: none;
+    margin-left: auto;
+    margin-right: 0px none;
 }
+
+.working-time p{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 8px;
+}
+
 
 .user-navigation li,
 .site-navigation li {
@@ -253,13 +283,11 @@ a {
 
 .site-navigation > li {
     margin: 0px;
-    display: flex;
 }
 
 .site-navigation-item {
     display: block;
     padding: 9px 14px 10px 13px;
-    white-space: nowrap;
     border-radius: 15px;
 }
 .site-navigation-item::after{
@@ -288,10 +316,13 @@ a {
 }
 
 .user-navigation-item{
+    display: block;
     color: #ffffff;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     text-align: center;
+    padding: 10px 17px;
+    margin-left: 20px;
 }
 
 .user-navigation-item:hover,
@@ -570,10 +601,15 @@ a {
 
 /* Слайдер |INDEX|
      ========================================================================== */
+.slider-controls{
+    position: absolute;
+}
+
 .slider{
     display: flex;
-    align-items: center; /*не знаю, как должен работать слайдер, нужна помощь в разментке*/
-    width: 1146px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
 }
 
 .slider-item {
@@ -599,24 +635,35 @@ a {
 }
 
 .slider-btn{
+    padding: 17px 42px;
     text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 }
 
 /* Бонусы при покупке |INDEX|
      ========================================================================== */
 .special {
+    margin-top: 30px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .special h3 {
+    margin-top: -10px;
     display: flex;
+    padding: 0px none;
+    margin: 0px none;
 	font-size: 35px;
     font-weight: 700;
     line-height: 41px;
 }
 
 .special p {
+    display: flex;
+    margin-top: -20px;
+    padding: 0px;
+    margin: 0px none;
+    width: 515px;
 	font-size: 18px;
     font-weight: 700;
     line-height: 22px;
@@ -626,12 +673,13 @@ a {
     display: flex;
     flex-direction: column;
     align-items: left;
-	background-image: url("../img/raspberriesbg.jpg");  /*Тут тоже небольшие проблемы из-за последнего блока*/
+	background-image: url("../img/raspberriesbg.jpg");
     background-color: #af2d4d;
 	background-size: cover;
 	background-repeat: no-repeat;
-    width: 560px;
-    height: 229px;
+    padding-top:-20px;
+    padding: 25px 20px;
+    width: 510px;
     border-radius: 15px;
 }
 
@@ -643,12 +691,13 @@ a {
     background-color: #41271a;
 	background-size: cover;
 	background-repeat:no-repeat;
-    width: 560px;
-    height: 229px;
+    padding: 25px 20px;
+    width: 510px;
     border-radius: 15px;
 }
 
 .special-btn{
+    padding:14px 24px;
     align-self: flex-end;
 }
 
@@ -657,22 +706,50 @@ a {
 
 .product-hits{
     display: flex;
-    justify-content: space-around;
-    text-align: center;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 30px;
+
 }
+
 .product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 267px;
 	list-style: none;
+    padding: 0px 13px;
+}
+
+.product:first-child{
+    padding: 0px;
+    padding-right: 13px;
+}
+
+.product:last-child{
+    padding: 0px;
+    padding-left: 13px;
 }
 
 .product-btn{
     display: none;
+    padding: 14px 17px;
+    border: 20px;
+    margin: 0px 20px;
+    margin-bottom: 22px;
+    margin-top: -34px;
 }
 
 .product img {
+    display: flex;
     border-radius: 50%;
 }
 
 .product-description {
+    display: flex;
+    order: 1;
 	font-size: inherit;
     font-weight: 500;
 }
@@ -684,6 +761,7 @@ a {
 }
 
 .product-price {
+    display: flex;
 	font-size: 45px;
     font-weight: 700;
     line-height: 45px;
@@ -696,6 +774,7 @@ a {
 
 .product:hover,
 .product:focus{
+        border-radius: 5px;
         background-color: rgba(255, 255, 255, 0.2);
     }
 
@@ -717,23 +796,32 @@ a {
 	list-style: none;
 	color: #323232;
     width: 1146px;
-    height: 306px;
     border-radius: 15px;
 }
 
 .advantages-about {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 30px;
+    padding-left: 20px;
+    margin:0px;
     font-size: 24px;
     font-weight: 500;
     line-height: 30px;
 }
 
 .advantages-description li {
+    display: flex;
+    padding-top:20px;
+    padding-left: 20px;
 	list-style: none;
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
 }
+
 .advantages-description{
+    margin-top:-10px;
     display: flex;
     justify-content: space-between;
 }
@@ -741,7 +829,7 @@ a {
 .avantage-column-left{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between;        /* Я не знаю, как их тут выровнять по тексту*/
 }
 
 .advantage-column-right{
@@ -779,11 +867,14 @@ a {
 /* Блог и подписка |INDEX|
      ========================================================================== */
 .news{
+    margin-top:40px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .blog {
+    display: flex;
     background-color: #ffffff;
     background-image: url("../img/Blogbg.jpg");
     background-size: cover;
@@ -793,13 +884,17 @@ a {
 }
 
 .blog p {
+    padding-left: 20px;
     font-size: 16px;
     font-weight: 500;
     line-height: 22px;
     color: #323232;
 }
 
-.blog    b {
+.blog b {
+    display: block;
+    padding-left: 20px;
+    width:279px;
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
@@ -809,7 +904,9 @@ a {
 }
 
 .subscription {
- font-size: 16px;
+    padding-left: 20px;
+    display: block;
+    font-size: 16px;
     font-weight: 400;
     line-height: 22px;
     color: #323232;
@@ -817,6 +914,10 @@ a {
     height: 211px;
     background-color: #f8f7f4;
     border-radius: 15px;
+}
+
+.subscription p{
+    padding-bottom: 28px;
 }
 
 .subscription input[type="email"] {
@@ -831,13 +932,29 @@ a {
     line-height: 24px;
 }
 
+.subscription-btn{
+    margin-left: 16px;
+    padding: 13px 14px;
+}
+
 .subscription input[type="email"]:hover {
     border: 2px solid rgba(154, 154, 154, 0.52);
 }
 
 /* Адресс и карта |INDEX|
      ========================================================================== */
+.container-map{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0px auto;
+    padding: 0px;
+}
+
 .map-api{
+    margin-top:40px;
+    width: 1200px;
     display: flex;
     vertical-align: middle;
     flex-direction: row-reverse;
@@ -848,28 +965,47 @@ a {
 }
 
 .adress {
+    padding-left: 25px;
     margin:27px;
+    margin-top: 60px;
     width: 302px;
     height: 305px;
     background-color: #ffffff;
     color: #323232;
     border-radius: 15px;
 }
+.adress p:first-child{
+    display: block;
+    width: 148px;
+}
 
 .adress p {
+    margin-bottom: 0px;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
 }
 
 .adress b {
+    display: block;
+    width: 220px;
+    margin-bottom: -15px;
+
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
 }
 
+.adress-btn {
+    display: block;
+    margin-top: 26px;
+    margin-right: 26px;
+    padding: 13px 20px;
+}
+
 /* Обратная связь |INDEX|
      ========================================================================== */
+
 .feedback p {
     font-size: 24px;
     font-weight: 500;
@@ -907,6 +1043,8 @@ a {
     line-height: 24px;
 }
 
+
+
 /*.feedback input[type="text"]::placeholder,
 .feedback input[type="email"]::placeholder{
     padding-left: 15px;
@@ -920,6 +1058,7 @@ a {
 /* ФУТЕР
      ========================================================================== */
 .main-footer{
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     width: 1146px;
@@ -936,6 +1075,7 @@ a {
 }
 
 .footer-info-column{
+    margin: 0px 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

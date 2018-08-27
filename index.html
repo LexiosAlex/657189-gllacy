@@ -12,7 +12,7 @@
     <input class="visually-hidden" type="radio" id="slide-3" name="slider-control">
     <div class="site-wrapper">
   	    <header class="main-header">
-            <div class="header-left-column">
+            <div class="container">
             <div class="main-header-logo">
                 <a>
                     <img src="img/mainlogo.svg" width="154" height="64" alt="Логотип магазина мороженнного GlaccyShop">
@@ -34,9 +34,7 @@
                     </li>
                     <li><a class="site-navigation-item" href="delivery.html">Доставка и оплата</a></li>
                     <li><a class="site-navigation-item" href="about.html">О компании</a></li>
-                    </div>
                 </ul>
-                <div class="header-right-column">
                 <ul class="user-navigation">
                     <li class="search">
                         <a class="user-navigation-item" href="#" >Поиск</a>
@@ -73,15 +71,16 @@
                         <a class="user-navigation-item" href="#">Пусто</a>
                     </li>
                 </ul>
-            </nav>
-            <div class="working-time" >
-                <p>С 10 до 20, ежедневно</p>
-                <p>8 812 450-25-25</p>
-            </div>
+                </nav>
+                <div class="working-time" >
+                    <p>С 10 до 20, ежедневно</p>
+                    <p>8 812 450-25-25</p>
+                </div>
         </div>
         </header>
   	    <main>
             <h1 class="visually-hidden">Магазин мороженного &laquo;Глейси&raquo;</h1>
+            <div class="container">
             <section class="slider">
                 <h2 class="visually-hidden">Новинки</h2>
                 <div class="slider-controls">
@@ -107,6 +106,8 @@
                     </li>
                 </ul>
             </section>
+            </div>
+            <div class="container">
             <h2 class="visually-hidden">Бонусы при покупке у нас</h2>
             <div class="special">
         	   <div class="special-offer1">
@@ -120,6 +121,8 @@
         	        <a class="btn special-btn" href="catalog.html">Хочу шоколадки!</a>
         	    </div>
             </div>
+            </div>
+            <div class="container">
             <section class="hit">
                 <h2 class="visually-hidden">Популярные товары</h2>
         	    <ul class="product-hits">
@@ -149,6 +152,8 @@
         		    </li>
         	    </ul>
             </section>
+            </div>
+            <div class="container">
             <section class="advantages">
                 <h2 class="visually-hidden">Наши преймущества</h2>
         	    <b class="advantages-about">Магазин Глэйси - это онлайн - и офлайн-магазин по продаже мороженного собственного производства на развес</b>
@@ -163,6 +168,8 @@
                     </div>
         	    </ul>
             </section>
+            </div>
+            <div class="container">
             <div class="news">
        	        <article class="blog">
                     <a href="#">
@@ -177,23 +184,25 @@
                         <p>
        	                    <label class="visually-hidden" for="sub">Почта</label>
                             <input type="email" name="sub-email" id="sub" placeholder="Электронная почта" >
-       	                    <button class="btn" type="submit">Отправить</button>
+       	                    <button class="btn subscription-btn" type="submit">Отправить</button>
                         </p>
                     </form>
                 </section>
             </div>
+            </div>
+            <div class="container-map">
             <section class="location">
                 <h2 class="visually-hidden">Контактая информация</h2>
         	    <span class="map-api">
                     <img class="visually-hidden" src="img/map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
                     <div class="adress">
-                        <p>Адрес главного офиса и офлайн-магазина</p>
+                        <p>Адрес главного офиса и офлайн-магазина:</p>
                         <b>Ул.Большая Конюшенная 19/8, Санкт-Петербург</b>
                         <br>
                         <p>Для заказов по телефону:</p>
                         <b>8 812 450-25-25</b>
                         <p>(с 10 до 20 ежедневно)</p>
-                        <a class="btn" href="feedback-form">Форма обратной связи</a>
+                        <a class="btn adress-btn" href="feedback-form">Форма обратной связи</a>
                     </div>
                 </span>
             </section>
@@ -217,8 +226,10 @@
                     <button class="closebtn" type="button"><span class="visually-hidden">Закрыть</span></button>
                 </form>
             </section>
+            </div>
         </main>
-        <footer>
+        <div class="container">
+        <footer class="main-footer">
             <h3 class="visually-hidden">Подпишитесь на нас в соц.сетях</h3>
             <ul class="social-media">
                <li><a class="social twitter" href="#"><span class="visually-hidden">Twitter</span></a></li>
@@ -228,10 +239,14 @@
             </ul>
             <div>
             <ul class="footer-info">
-                <li><a class="provider footer-info-link" href="#">Для поставщиков</a></li>
-                <li><a class="production footer-info-link" href="#">О производстве</a></li>
-                <li><a class="documents footer-info-link" href="#">Наши документы</a></li>
-                <li><a class="standarts footer-info-link" href="#">Экологические стандарты</a></li>
+                <div class="footer-info-column">
+                    <li><a class="provider footer-info-link" href="#">Для поставщиков</a></li>
+                    <li><a class="production footer-info-link" href="#">О производстве</a></li>
+                </div>
+                <div class="footer-info-column">
+                    <li><a class="documents footer-info-link" href="#">Наши документы</a></li>
+                    <li><a class="standarts footer-info-link" href="#">Экологические стандарты</a></li>
+                </div>
             </ul>
             </div>
             <div class="footer-copyright">
@@ -241,6 +256,6 @@
                 <p>Сделанно в <a href="https://htmlacademy.ru/">HTML Academy</a> © 2017</p>
             </div>
         </footer>
-    </div>
+        </div>
 </body>
 </html>
