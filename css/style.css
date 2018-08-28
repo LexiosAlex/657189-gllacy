@@ -180,6 +180,30 @@ a {
     display: none;
 }
 
+.site-wrapper{
+    min-width: 860px;
+    background-color: #849d8f;
+    background-image: url("../img/sliderbg1.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+.site-wrapper::before,
+.site-wrapper::after {
+  content: "";
+
+  visibility: hidden;
+}
+
+.site-wrapper::before {
+  background-image: url("../img/sliderbg2.png");
+}
+
+.site-wrapper::after {
+  background-image: url("../img/sliderbg3.png");
+}
+
 .btn {
     font: inherit;
     text-align: center;
@@ -188,10 +212,11 @@ a {
     box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
     background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
     border: none;
-    text-transform: uppercase;
+    text-transform: none;
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
+    cursor: pointer;
 }
 
 .btn:hover,
@@ -261,7 +286,7 @@ a {
 
 .working-time{
     margin-left: auto;
-    margin-right: 0px none;
+    text-align: right;
 }
 
 .working-time p{
@@ -596,22 +621,19 @@ a {
 
 /* Слайдер |INDEX|
      ========================================================================== */
-.slider-controls{
-    position: absolute;
-}
-
 .slider{
+    position: relative;
+    padding-top: 200px;
     width: 100%;
 }
 
-.slider-item {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-	list-style: none;
+.slide {
+    display: none;
 }
 
 .slider-item p {
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     width: 82%;
     /*width: 665px;*/
@@ -621,6 +643,7 @@ a {
 }
 
 .slider-item a {
+    margin-top: -30px;
     font-size: 32px;
     font-weight: 700;
     line-height: 44px;
@@ -629,6 +652,52 @@ a {
 .slider-btn{
     padding: 17px 42px;
     text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+}
+
+.slider-controls label {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
+    vertical-align: top;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-controls {
+    position: absolute;
+    bottom:63px;
+    z-index: 20;
+    font-size: 0;
+}
+
+#slide-1:checked ~ .site-wrapper {
+  background-color: #849d8f;
+  background-image: url("../img/sliderbg1.png");
+}
+
+#slide-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+  background-image: url("../img/sliderbg2.png");
+}
+
+#slide-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
+  background-image: url("../img/sliderbg3.png");
+}
+
+#slide-1:checked ~ .site-wrapper #slide1,
+#slide-2:checked ~ .site-wrapper #slide2,
+#slide-3:checked ~ .site-wrapper #slide3 {
+    display: block;
+}
+
+#slide-1:checked ~ .site-wrapper label[for="slide-1"],
+#slide-2:checked ~ .site-wrapper label[for="slide-2"],
+#slide-3:checked ~ .site-wrapper label[for="slide-3"] {
+  background-color: #ffffff;
 }
 
 /* Бонусы при покупке |INDEX|
