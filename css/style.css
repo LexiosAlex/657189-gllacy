@@ -154,7 +154,7 @@ body {
 	font-family: "Roboto","Tahoma", sans-serif;
 	background-color: #849d8f;
 	color: #ffffff;
-	min-width: 860px;
+	min-width: 900px;
     font-size: 16px;
     font-weight: 700;
     line-height: 18px;
@@ -213,16 +213,16 @@ a {
 .main-navigation{
     display: flex;
     flex-direction: row;
-    width: 85%;
+    width: 80%;
 }
 
 .container{
-    width: 1146px;
+    max-width: 1146px;
     margin: 0px auto;
     padding: 0px 20px;
 }
 
-.main-container{
+.main-header > .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -230,7 +230,8 @@ a {
 
 .main-header-logo{
     width: 13.5%;
-    padding-top: 9px;
+    padding-top: 15px;
+    margin-right:24px;
 }
 
 .main-header{
@@ -240,10 +241,9 @@ a {
 .site-navigation{
     display: flex;
     justify-content: space-between;
-    width: 385px;
     margin: 0px;
     padding: 0px;
-    margin-right: 100px;
+    margin-right: 88px;
     margin-top: 24px;
     margin-bottom: 20px;
     margin-right: auto;
@@ -252,26 +252,19 @@ a {
 .user-navigation{
     justify-content: space-between;
     display: flex;
-    width: 265px;
     margin-left: 0px none;
     margin-right: 0px none;
     padding: 0px;
     margin-top: 24px;
-    margin-right: 15px;
-    margin-bottom: 20px;
+
 }
 
 .working-time{
-    display: flex;
-    order: 1;
-    flex-direction: column;
     margin-left: auto;
     margin-right: 0px none;
 }
 
 .working-time p{
-    display: flex;
-    align-self: flex-end;
     padding: 0px;
     margin: 0px;
     margin-top: 8px;
@@ -399,7 +392,7 @@ a {
 .menu-list:hover .menu-drop,
 .site-navigation-item:hover + .menu-drop,
 .site-navigation-item:focus + .menu-drop {
-    display: block;
+    /*display: block;*/
 }
 
 
@@ -608,10 +601,7 @@ a {
 }
 
 .slider{
-    display: flex;
-    align-items: center;
     width: 100%;
-    justify-content: center;
 }
 
 .slider-item {
@@ -622,9 +612,9 @@ a {
 }
 
 .slider-item p {
-    display: flex;
     text-align: center;
-    width: 670px;
+    width: 82%;
+    /*width: 665px;*/
     font-size: 60px;
     font-weight: 700;
     line-height: 60.35px;
@@ -648,9 +638,8 @@ a {
     width: 100%;
 }
 
-.special-container{
+.special > .container{
     display: flex;
-    justify-content: space-between;
 }
 
 .special h3 {
@@ -668,7 +657,7 @@ a {
     margin-top: -20px;
     padding: 0px;
     margin: 0px none;
-    width: 515px;
+    max-width: 515px;
 	font-size: 18px;
     font-weight: 700;
     line-height: 22px;
@@ -684,8 +673,9 @@ a {
 	background-repeat: no-repeat;
     padding-top:-20px;
     padding: 25px 20px;
-    width: 510px;
+    width: 48%;
     border-radius: 15px;
+    margin-right: 10px;
 }
 
 .special-offer2 {
@@ -697,8 +687,9 @@ a {
 	background-size: cover;
 	background-repeat:no-repeat;
     padding: 25px 20px;
-    width: 510px;
+    width: 48%;
     border-radius: 15px;
+    margin-left: 10px;
 }
 
 .special-btn{
@@ -723,7 +714,7 @@ a {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    width: 267px;
+    width: 23%;
 	list-style: none;
     padding: 0px 13px;
 }
@@ -750,6 +741,8 @@ a {
 .product img {
     display: flex;
     border-radius: 50%;
+    width: 95%;
+    height: 50%;
 }
 
 .product-description {
@@ -794,13 +787,17 @@ a {
      ========================================================================== */
 
 .advantages {
+    width: 100%;
+}
+
+.advantages-background{
     display: flex;
     flex-direction: column;
-	background-color: #e8dbbe;
-	background-image: url("../img/waffelbg.jpg");
-	list-style: none;
-	color: #323232;
-    width: 1146px;
+    background-color: #e8dbbe;
+    background-image: url("../img/waffelbg.jpg");
+    list-style: none;
+    color: #323232;
+    max-width: 1146px;
     border-radius: 15px;
 }
 
@@ -816,7 +813,9 @@ a {
 }
 
 .advantages-description li {
+    margin-left: 20px;
     display: flex;
+    width: 40%;
     padding-top:20px;
     padding-left: 20px;
 	list-style: none;
@@ -827,20 +826,12 @@ a {
 
 .advantages-description{
     margin-top:-10px;
+    flex-direction: row;
     display: flex;
-    justify-content: space-between;
-}
-
-.avantage-column-left{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;        /* Я не знаю, как их тут выровнять по тексту*/
-}
-
-.advantage-column-right{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items:flex-start;
 }
 
 /*.advantages-description li:nth-child(1):before {
@@ -871,6 +862,7 @@ a {
 
 /* Блог и подписка |INDEX|
      ========================================================================== */
+
 .news{
     margin-top:40px;
     width: 100%;
@@ -878,7 +870,7 @@ a {
 
 .news > .container{
     display: flex;
-    justify-content: space-between;
+
 }
 
 .blog {
@@ -886,23 +878,28 @@ a {
     background-color: #ffffff;
     background-image: url("../img/Blogbg.jpg");
     background-size: cover;
-    width: 560px;
-    height: 220px;
+    width: 48.5%;
     border-radius: 15px;
+    margin-right: 10px;
 }
 
 .blog p {
+    display: flex;
+    margin-right: auto;
+    max-width: 279px;
     padding-left: 20px;
     font-size: 16px;
     font-weight: 500;
     line-height: 22px;
     color: #323232;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .blog b {
+    margin-right: auto;
     display: block;
     padding-left: 20px;
-    width:279px;
+    width:50%;
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
@@ -912,14 +909,14 @@ a {
 }
 
 .subscription {
+    margin-left: 10px;
     padding-left: 20px;
-    display: block;
+    display: flex;
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
     color: #323232;
-    width: 549px;
-    height: 211px;
+    width: 48.5%;
     background-color: #f8f7f4;
     border-radius: 15px;
 }
@@ -929,7 +926,7 @@ a {
 }
 
 .subscription input[type="email"] {
-    width: 368px;
+    width: 65%;
     height: 44px;
     border: 1px solid rgba(178, 178, 178, 0.52);
     border-radius: 5px;
@@ -943,6 +940,7 @@ a {
 .subscription-btn{
     margin-left: 16px;
     padding: 13px 14px;
+    width: 24%;
 }
 
 .subscription input[type="email"]:hover {
@@ -951,18 +949,15 @@ a {
 
 /* Адресс и карта |INDEX|
      ========================================================================== */
-.container-map{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 1200px;
+.map-container{
+    max-width: 1200px;
     margin: 0px auto;
-    padding: 0px;
+    padding: 0px 0px;
 }
 
 .map-api{
     margin-top:40px;
-    width: 1200px;
+    max-width: 1200px;
     display: flex;
     vertical-align: middle;
     flex-direction: row-reverse;
@@ -998,7 +993,6 @@ a {
     display: block;
     width: 220px;
     margin-bottom: -15px;
-
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
@@ -1050,18 +1044,6 @@ a {
     font-weight: 400;
     line-height: 24px;
 }
-
-
-
-/*.feedback input[type="text"]::placeholder,
-.feedback input[type="email"]::placeholder{
-    padding-left: 15px;
-}
-
-.feedback textarea::placeholder{
-    padding-left: 15px;
-    padding-top: 13px;
-}*/
 
 /* ФУТЕР
      ========================================================================== */
