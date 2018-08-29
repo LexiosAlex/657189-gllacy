@@ -8,6 +8,7 @@
 </head>
 <body>
 	 <header class="main-header">
+            <div class="container">
             <div class="main-header-logo">
                 <a href="index.html">
                     <img src="img/mainlogo.svg" width="154" height="64" alt="Логотип магазина мороженнного GlaccyShop">
@@ -33,7 +34,7 @@
                 <ul class="user-navigation">
                     <li class="search">
                         <a class="user-navigation-item" href="#" >Поиск</a>
-                        <section>
+                        <section class="visually-hidden">
                             <h3 class="visually-hidden">Форма поиска по сайту</h3>
                             <form action="https://echo.htmlacademy.ru">
                                 <label class="visually-hidden" for="user-search">Поиск по сайту</label>
@@ -43,7 +44,7 @@
                     </li>
                     <li class="login">
                         <a class="user-navigation-item" href="#">Вход</a>
-                        <section>
+                        <section class="visually-hidden">
                             <h3 class="visually-hidden">Форма Входа</h3>
                             <form id="login-form" action="https://echo.htmlacademy.ru" method="post">
                                 <p>
@@ -63,8 +64,8 @@
                         </section>
                     </li>
                     <li class="full-cart">
-                        <a class="user-navigation-item" href="#"><span>"Иконка корзины"</span>2 товара</a>
-                        <section>
+                        <a class="user-navigation-item" href="#">2 товара</a>
+                        <section class="visually-hidden">
                             <h3 class="visually-hidden">Корзина</h3>
                             <ul class="full-cart-items">
                                 <li class="full-cart-item1">
@@ -92,13 +93,17 @@
             <p>С 10 до 20, ежедневно</p>
             <p>8 812 450-25-25</p>
         </div>
+    </div>
     </header>
     <main>
+        <div class="container">
     	<ul class="way">
             <li><a href="index.html">Главная</a></li>
             <li><a href="#"> » Каталог</a></li>
             <li><a href=""> » Сливочное</a></li>
         </ul>
+        </div>
+        <div class="container">
     	<h1>Сливочное мороженное</h1>
     	<form class="sort" method="get" action="https://echo.htmlacademy.ru">
             <fieldset class="sort-popularity">
@@ -110,8 +115,8 @@
                     <option>По жирности</option>
                 </select>
             </fieldset>
-            <fieldset>
-                <legend>Цена:</legend>
+            <div class="sort-prices-filter">
+                <p class="filter-price">Цена:</p>
                 <p class="sort-price">
                     <label class="visually-hidden" for="price-min">Минимальная цена:</label>
                     <input class="min-input" id="price-min" type="text" value="100" name="price_min">
@@ -120,11 +125,17 @@
                     <input id="price-max" type="text" class="max-input" value="500" name="price_max">
                     <span>руб.</span>
                 </p>
-                <div id="range-slider">
-                    <span></span>
+                <div class="range-controls">
+                    <div class="scale-border">
+                        <div class="scale">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                    <div class="range-toggle range-toggle-min"></div>
+                    <div class="range-toggle range-toggle-max"></div>
                 </div>
-            </fieldset>
-            <fieldset >
+            </div>
+            <fieldset class="sort-fats-filter">
                 <legend>Жирность:</legend>
                 <ul class="sort-fat">
                     <li>
@@ -145,7 +156,7 @@
                     </li>
                 </ul>
             </fieldset>
-            <fieldset >
+            <fieldset class="sort-insides-filter">
                 <legend>Наполнители:</legend>
                 <ul class="sort-inside">
                     <li>
@@ -171,8 +182,10 @@
                 </ul>
             </fieldset>
     		<button type="submit" class="sort-btn">Применить</button>
-    	</form>
+            </form>
+        </div>
     	<section class="assortment">
+            <div class="container">
             <h2 class="visually-hidden">Ассортимент</h2>
         	<ul class="assortment-product">
         		<li class="product">
@@ -248,6 +261,7 @@
                     <a class="btn product-btn">Быстрый просмотр</a>
         		</li>
         	</ul>
+        </div>
         </section>
         <h2 class="visually-hidden">Скролл страниц каталога</h2>
         <div class="product-list">
@@ -262,7 +276,8 @@
             </ul>
         </div>
     </main>
-        <footer>
+    <footer class="main-footer">
+            <div class="container">
             <h3 class="visually-hidden">Подпишитесь на нас в соц.сетях</h3>
             <ul class="social-media">
                <li><a class="social twitter" href="#"><span class="visually-hidden">Twitter</span></a></li>
@@ -272,10 +287,14 @@
             </ul>
             <div>
             <ul class="footer-info">
-                <li><a class="provider footer-info-link" href="#">Для поставщиков</a></li>
-                <li><a class="production footer-info-link" href="#">О производстве</a></li>
-                <li><a class="documents footer-info-link" href="#">Наши документы</a></li>
-                <li><a class="standarts footer-info-link" href="#">Экологические стандарты</a></li>
+                <div class="footer-info-column">
+                    <li><a class="provider footer-info-link" href="#">Для поставщиков</a></li>
+                    <li><a class="production footer-info-link" href="#">О производстве</a></li>
+                </div>
+                <div class="footer-info-column">
+                    <li><a class="documents footer-info-link" href="#">Наши документы</a></li>
+                    <li><a class="standarts footer-info-link" href="#">Экологические стандарты</a></li>
+                </div>
             </ul>
             </div>
             <div class="footer-copyright">
@@ -283,6 +302,7 @@
                     <img src="img/html-academy-logo.svg" width="128" height="39" alt="Логотип HTML-Академии">
                 </a>
                 <p>Сделанно в <a href="https://htmlacademy.ru/">HTML Academy</a> © 2017</p>
+            </div>
             </div>
         </footer>
 </body>

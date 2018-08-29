@@ -181,7 +181,7 @@ a {
 }
 
 .site-wrapper{
-    min-width: 860px;
+    min-width: 900px;
     background-color: #849d8f;
     background-image: url("../img/sliderbg1.png");
     background-repeat: no-repeat;
@@ -277,8 +277,8 @@ a {
 .user-navigation{
     justify-content: space-between;
     display: flex;
-    margin-left: 0px none;
-    margin-right: 0px none;
+    margin-left: 0px;
+    margin-right: 0px;
     padding: 0px;
     margin-top: 24px;
 
@@ -310,24 +310,19 @@ a {
     padding: 9px 14px 10px 13px;
     border-radius: 15px;
 }
+
 .site-navigation-item::after{
     content: "";
     display: block;
     height: 1px;
     background-color: rgba(255, 255, 255, 0.2);
 }
+
 .site-navigation-item .menu-list,
 .site-navigation-item:hover,
 .site-navigation-item:focus {
 	background-color: #f7f6f3;
 	color: #323232;
-}
-
-.site-navigation-item-current {
-    background-color: #d07058;
-    border-radius: 25px;
-    padding: 9px 14px 10px 13px;
-    margin: 0px;
 }
 
 .site-navigation-item:active,
@@ -420,7 +415,13 @@ a {
     /*display: block;*/
 }
 
-
+.site-navigation-item-current {
+    display: block;
+    background-color: #d07058;
+    border-radius: 25px;
+    padding: 9px 14px 10px 13px;
+    margin: 0px;
+}
 
 /* Навигация пользователя
      ========================================================================== */
@@ -430,7 +431,6 @@ a {
     font-weight: 700;
     line-height: 16px;
 }
-
 
 /* Поиск
      ========================================================================== */
@@ -457,6 +457,7 @@ a {
 .search input[type="search"]:hover {
     border: 2px solid rgba(154, 154, 154, 0.52);
 }
+
 /* Логин
      ========================================================================== */
 
@@ -557,19 +558,40 @@ a {
 /* Стили главной страницы(|INDEX|) и каталога(|CATALOG|)
      ========================================================================== */
 
+.way{
+    list-style: none;
+    display: flex;
+}
+
+.way a::after{
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 /* Сортировка (|CATALOG|)
      ========================================================================== */
 .sort {
+    display: flex;
+    flex-wrap: wrap;
     font-size: 16px;
     font-weight: 500;
     line-height: 18px;
     color: #ffffff;
 }
 
+.sort fieldset{
+    border: none;
+}
+
 .sort-popularity select {
+    align-self: center;
+    padding: 12px 16px;
     background-color: rgba(255, 255, 255, 0.2);
     color: #ffffff;
-    border:none;
+    border: none;
+    border-radius: 50px;
 }
 
 .sort-popularity select:hover {
@@ -589,23 +611,101 @@ a {
     border: none;
 }
 
-.sort-price {
- color: #ffffff;
+.filter-price{
+    margin-top: 0px;
+    margin-right: 10px;
+}
+
+.sort-prices-filter {
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+}
+
+.sort-price{
+    margin-top: 0px;
+}
+
+.sort-price input{
+    width: 30px;
+    margin: 0px;
+    color: inherit;
+    font: inherit;
+    background: none;
+    border: none;
+}
+
+.range-controls {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.range-controls .scale {
+    height: 2px;
+    width: 176px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 50px;
+}
+
+.range-controls .scale-border{
+    padding: 20px 17px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+}
+
+.range-controls .bar {
+    margin-left: 17px;
+    width: 107px;
+    height: 2px;
+    background: #ffffff;
+}
+
+.range-toggle {
+    width: 4px;
+    height: 4px;
+    background: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
+}
+
+.sort-fats-filter{
+    display: flex;
+    width: 48%;
 }
 
 .sort-fat {
+    margin-top:5px;
+    display: flex;
+    list-style: none;
+    padding: 12px 16px;
+    justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+}
+
+.sort-insides-filter{
+    display: flex;
+    width: 81.7%;
 }
 
 .sort-inside {
+    margin-top:5px;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-radius: 50px;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
 .sort-btn {
-    width: 144px;
-    height: 37px;
+    align-self: center;
+    padding: 11px 16px;
     border: 2px solid #ffffff;
     background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
     color: #ffffff;
 }
 
@@ -714,8 +814,8 @@ a {
 .special h3 {
     margin-top: -10px;
     display: flex;
-    padding: 0px none;
-    margin: 0px none;
+    padding: 0px;
+    margin: 0px;
 	font-size: 35px;
     font-weight: 700;
     line-height: 41px;
@@ -725,7 +825,7 @@ a {
     display: flex;
     margin-top: -20px;
     padding: 0px;
-    margin: 0px none;
+    margin: 0px;
     max-width: 515px;
 	font-size: 18px;
     font-weight: 700;
@@ -735,12 +835,10 @@ a {
 .special-offer1 {
     display: flex;
     flex-direction: column;
-    align-items: left;
 	background-image: url("../img/raspberriesbg.jpg");
     background-color: #af2d4d;
 	background-size: cover;
 	background-repeat: no-repeat;
-    padding-top:-20px;
     padding: 25px 20px;
     width: 48%;
     border-radius: 15px;
@@ -750,7 +848,6 @@ a {
 .special-offer2 {
     display: flex;
     flex-direction: column;
-    align-items: left;
     background-image: url("../img/chocolatebg.jpg");
     background-color: #41271a;
 	background-size: cover;
@@ -762,6 +859,7 @@ a {
 }
 
 .special-btn{
+    margin-top: 20px;
     padding:14px 24px;
     align-self: flex-end;
 }
