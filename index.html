@@ -21,7 +21,7 @@
              <nav class="main-navigation">
                 <ul class="site-navigation">
                     <li class="menu menu-list">
-                        <a class="site-navigation-item">Каталог</a>
+                        <a href="catalog.html" class="site-navigation-item">Каталог</a>
                         <div class="menu-drop">
                             <p>Новинки</p>
                             <ul>
@@ -37,8 +37,8 @@
                 </ul>
                 <ul class="user-navigation">
                     <li class="search">
-                        <a class="user-navigation-item" href="#" >Поиск</a>
-                        <section class="visually-hidden">
+                        <a class="user-navigation-item search-list" href="#" >Поиск</a>
+                        <section class="search-section">
                             <h3 class="visually-hidden">Форма поиска по сайту</h3>
                             <form action="https://echo.htmlacademy.ru">
                                 <label class="visually-hidden" for="user-search">Поиск по сайту</label>
@@ -47,8 +47,8 @@
                         </section>
                     </li>
                     <li class="login">
-                        <a class="user-navigation-item" href="#">Вход</a>
-                        <section class="visually-hidden">
+                        <a class="user-navigation-item login-list" href="#">Вход</a>
+                        <section class="login-section">
                             <h3 class="visually-hidden">Форма Входа</h3>
                             <form id="login-form" action="https://echo.htmlacademy.ru" method="post">
                                 <p>
@@ -59,11 +59,13 @@
                                     <label class="visually-hidden" for="user-password">Пароль</label>
                                     <input id="user-password" type="password" name="password" placeholder="Пароль">
                                 </p>
+                                <div class="login-form-bottom">
                                 <button class="btn login-btn" type="submit" form="login-form">Войти</button>
                                 <ul>
                                     <li><a class="formlinks pass-forgot" href="">Забыли пароль?</a></li>
                                     <li><a class="formlinks new-user" href="">Новая регистрация</a></li>
                                 </ul>
+                                </div>
                             </form>
                         </section>
                     </li>
@@ -127,25 +129,25 @@
                 <h2 class="visually-hidden">Популярные товары</h2>
         	    <ul class="product-hits">
         		    <li class="product">
-        		        <a href="#"><h3 class="product-description">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3></a>
+        		        <a class="product-description" href="#"><h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3></a>
         	    	    <img src="img/orange.jpg" width="267" height="267" alt="Апельсин">
         			    <p class="product-price">310₽<span>/кг</span></p>
                         <a class="btn product-btn" href="">Быстрый просмотр</a>
         		    </li>
         		    <li class="product">
-        			    <a href="#"><h3 class="product-description">Сливочно-кофейное с кусочками шоколада</h3></a>
+        			    <a class="product-description" href="#"><h3>Сливочно-кофейное с кусочками шоколада</h3></a>
         			    <img src="img/coffee.jpg" width="267" height="267" alt="Кофе">
         			    <p class="product-price">380₽<span>/кг</span></p>
                         <a class="btn product-btn" href="">Быстрый просмотр</a>
         		    </li>
         		    <li class="product">
-        			    <a href="#"><h3 class="product-description">Сливочно-клубничное с присыпкой из белого шоколада</h3></a>
+        			    <a class="product-description" href="#"><h3>Сливочно-клубничное с присыпкой из белого шоколада</h3></a>
         			    <img src="img/strawberry.jpg" width="267" height="267" alt="Клубника">
         			    <p class="product-price">355₽<span>/кг</span></p>
                         <a class="btn product-btn" href="">Быстрый просмотр</a>
         		    </li>
         		    <li class="product">
-        			    <a href="#"><h3 class="product-description">Сливочное крем-брюле с карамельной подливкой</h3></a>
+        			    <a class="product-description" href="#"><h3>Сливочное крем-брюле с карамельной подливкой</h3></a>
         			    <img src="img/caramel.jpg" width="267" height="267" alt="Карамель">
         			    <p class="product-price">415₽<span>/кг</span></p>
                         <a class="btn product-btn" href="">Быстрый просмотр</a>
@@ -226,7 +228,7 @@
                 </form>
             </section>
         </main>
-        <footer class="main-footer">
+    <footer class="main-footer">
             <div class="container">
             <h3 class="visually-hidden">Подпишитесь на нас в соц.сетях</h3>
             <ul class="social-media">
@@ -237,14 +239,10 @@
             </ul>
             <div>
             <ul class="footer-info">
-                <div class="footer-info-column">
-                    <li><a class="provider footer-info-link" href="#">Для поставщиков</a></li>
-                    <li><a class="production footer-info-link" href="#">О производстве</a></li>
-                </div>
-                <div class="footer-info-column">
-                    <li><a class="documents footer-info-link" href="#">Наши документы</a></li>
-                    <li><a class="standarts footer-info-link" href="#">Экологические стандарты</a></li>
-                </div>
+                <li><a class="provider footer-info-link" href="#">Для поставщиков</a></li>
+                <li><a class="documents footer-info-link" href="#">Наши документы</a></li>
+                <li><a class="production footer-info-link" href="#">О производстве</a></li>
+                <li><a class="standarts footer-info-link" href="#">Экологические стандарты</a></li>
             </ul>
             </div>
             <div class="footer-copyright">
