@@ -1158,6 +1158,7 @@ a {
     background-color: #ffffff;
     background-image: url("../img/Blogbg.jpg");
     background-size: cover;
+    background-position: right center;
     width: 48.5%;
     border-radius: 15px;
     margin-right: 10px;
