@@ -181,7 +181,6 @@ a {
 }
 
 .site-wrapper{
-    min-width: 900px;
     background-color: #849d8f;
     background-image: url("../img/sliderbg1.png");
     background-repeat: no-repeat;
@@ -380,9 +379,9 @@ a {
     margin-left: 6px;
 }
 
-.menu-drop li {
+.menu-drop ul {
     padding: 0px;
-    margin-left: -40px;
+    margin-left: 0px;
 }
 
 .menu-drop a {
@@ -461,7 +460,7 @@ a {
     line-height: 24px;
 }
 .search input[type="search"]:hover {
-    border: 2px solid rgba(154, 154, 154, 0.52);
+    box-shadow: inset 0px 0px 0px 1px rgba(154, 154, 154, 0.52);
 }
 
 .search-list:hover .search-section,
@@ -507,7 +506,7 @@ a {
 }
 .login input[type="email"]:hover,
 .login input[type="password"]:hover {
-    border: 2px solid rgba(154, 154, 154, 0.52);
+    box-shadow: inset 0px 0px 0px 1px rgba(154, 154, 154, 0.52);
 }
 
 .login-form-bottom{
@@ -518,7 +517,7 @@ a {
     margin-top: 20px;
  }
 
-.formlinks {
+.form-link {
     font-size: 13px;
     font-weight: 400;
     line-height: 24px;
@@ -526,9 +525,9 @@ a {
     text-decoration: underline;
 }
 
-.formlinks:hover,
-.formlinks:focus,
-.formlinks:active{
+.form-link:hover,
+.form-link:focus,
+.form-link:active{
     color: #e84d37;
 }
 
@@ -1007,9 +1006,12 @@ a {
     margin-top: auto;
 }
 
-.product img {
+.product-image {
     margin-top: 9px;
     margin-bottom: 0px;
+}
+
+.product-image img{
     border-radius: 50%;
     width: 100%;
     height: auto;
@@ -1222,7 +1224,7 @@ a {
 }
 
 .subscription input[type="email"]:hover {
-    border: 2px solid rgba(154, 154, 154, 0.52);
+    box-shadow: inset 0px 0px 0px 1px rgba(154, 154, 154, 0.52);
 }
 
 /* Адресс и карта |INDEX|
@@ -1307,7 +1309,7 @@ a {
 }
 .feedback input[type="text"]:hover,
 .feedback input[type="email"]:hover {
-    border: 2px solid rgba(154, 154, 154, 0.52);
+    box-shadow: inset 0px 0px 0px 1px rgba(154, 154, 154, 0.52);
 }
 
 .feedback textarea {
