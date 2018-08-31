@@ -336,7 +336,7 @@ a {
     border-radius: 15px;
     text-align: center;
     padding: 10px 17px;
-    margin-left: 20px;
+    /*margin-left: 20px;*/
 }
 
 .user-navigation-item:hover,
@@ -353,6 +353,7 @@ a {
 }
 
 .menu-drop {
+    z-index: 6;
     margin-top: 5px;
     margin-left: -7px;
     position: absolute;
@@ -408,7 +409,6 @@ a {
     background-color: #f6b5a5;
 }
 
-
 .menu-list:hover .menu-drop,
 .site-navigation-item:hover + .menu-drop,
 .site-navigation-item:focus + .menu-drop {
@@ -434,8 +434,41 @@ a {
 
 /* Поиск
      ========================================================================== */
+.search{
+    width: 33px;
+    border-radius: 50%;
+}
+
+
+.search-list{
+    visibility: hidden;
+    position: relative;
+    padding: 0px;
+    width:33px;
+    height:33px;
+}
+
+.search-list::before{
+    visibility: visible;
+    position: absolute;
+    content: " ";
+    width: 17px;
+    height: 17px;
+    background-image: url(../img/search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 9px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-list:hover::before{
+    background-color: #ffffff;
+    background-image: url(../img/search-hover.svg);
+}
 
 .search-section {
+    z-index: 6;
     position: absolute;
     display: none;
     border-radius: 5px;
@@ -443,6 +476,7 @@ a {
     height: 84px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
     background-color: #f8f7f4;
+    margin-top: 7px;
     margin-left:-300px;
 }
 
@@ -469,9 +503,44 @@ a {
     display: block;
 }
 
+/*.search-list::before{
+    visibility: visible;
+    position: absolute;
+    content: " ";
+    width: 33px;
+    height: 33px;
+    background-color: rgba(255, 255, 255, 0.2);
+}*/
 
 /* Логин
      ========================================================================== */
+
+.login{
+    position: relative;
+    margin-left: 20px;
+}
+
+.login-list{
+    position: relative;
+    padding-left: 40px;
+}
+
+.login-list::before{
+    position: absolute;
+    content: " ";
+    width: 21px;
+    height: 19px;
+    left: 10px;
+    bottom: 8px;
+    background-image: url(../img/login.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.login-list:hover::before{
+    background-color: #ffffff;
+    background-image: url(../img/login-hover.svg);
+}
 
 .login-section {
     display: none;
@@ -552,6 +621,34 @@ a {
 
 /* Корзина
      ========================================================================== */
+.cart{
+    margin-left: 20px;
+    position: relative;
+}
+
+.cart-list{
+    position: relative;
+    padding-left: 40px;
+}
+
+.cart-list::before{
+    position: absolute;
+    content: " ";
+    width: 21px;
+    height: 19px;
+    left: 10px;
+    bottom: 8px;
+    background-image: url(../img/cart.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cart-list:hover::before{
+    background-color: #ffffff;
+    background-image: url(../img/cart-hover.svg);
+}
+
+
 
 .full-cart {
     color: #323232;
@@ -945,6 +1042,20 @@ a {
 
 /* Товар |INDEX| |CATALOG|
      ========================================================================== */
+.product-hits .product:before{
+    position: absolute;
+    content: " ";
+    background-image: url(../img/hit.svg);
+    background-repeat: no-repeat;
+    width: 61px;
+    height: 61px;
+    top: 10px;
+}
+
+.product-hits .product:nth-child(4n+1):before{
+    left: 13px;
+}
+
 .assortment-product{
     display: flex;
     flex-direction: row;
@@ -1084,16 +1195,24 @@ a {
 .advantages-about {
     margin: 0px;
     padding: 0px;
-    padding-top: 30px;
+    padding-top: 15px;
     padding-left: 20px;
-    margin:0px;
+    margin-bottom: -10px;
     font-size: 24px;
     font-weight: 500;
     line-height: 30px;
 }
 
+.advantages-description{
+    padding: 0px;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .advantages-description li {
-    margin-left: 20px;
+    position: relative;
+    margin-left: 56px;
     display: flex;
     width: 40%;
     padding-top:20px;
@@ -1104,41 +1223,49 @@ a {
     line-height: 22px;
 }
 
-.advantages-description{
-    margin-top:-10px;
-    flex-direction: row;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: flex-start;
-    align-items:flex-start;
+.icecream-dicription::before{
+    position: absolute;
+    content: " ";
+    background-image: url(../img/icecream.svg);
+    background-repeat: no-repeat;
+    width:49px;
+    height: 49px;
+    margin-left: -58px;
+    margin-top: -20px;
 }
 
-/*.advantages-description li:nth-child(1):before {
-	width: 48px;
-	height: 48px;
-	background-image: url(../img/icecream.svg);
-	background-repeat: no-repeat;
+.ingrodient-discription::before{
+    position: absolute;
+    content: " ";
+    background-image: url(../img/cow.svg);
+    background-repeat: no-repeat;
+    width:49px;
+    height: 49px;
+    margin-left: -58px;
+    margin-top: -20px;
 }
 
-.advantages-description li:nth-child(2):before {
-	width: 48px;
-	height: 48px;
-	background-image: url(../img/leaf.svg);
-	background-repeat: no-repeat;
+.quality-discription::before{
+    position: absolute;
+    content: " ";
+    background-image: url(../img/leaf.svg);
+    background-repeat: no-repeat;
+    width:49px;
+    height: 49px;
+    margin-left: -58px;
+    margin-top: -20px;
 }
-.advantages-description li:nth-child(3):before {
-	width: 48px;
-	height: 48px;
-	background-image: url(../img/cow.svg);
-	background-repeat: no-repeat;
+
+.delivery-discription::before{
+    position: absolute;
+    content: " ";
+    background-image: url(../img/temperature.svg);
+    background-repeat: no-repeat;
+    width:49px;
+    height: 49px;
+    margin-left: -58px;
+    margin-top: -20px;
 }
-.advantages-description li:nth-child(4):before {
-	width: 48px;
-	height: 48px;
-	background-image: url(../img/temperature.svg.svg);
-	background-repeat: no-repeat;
-}*/
 
 /* Блог и подписка |INDEX|
      ========================================================================== */
@@ -1353,8 +1480,48 @@ a {
 }
 
 .social-media{
+    border: 1px solid red;
     display: flex;
-    justify-content: space-between;
+    padding-left: 0px;
+    width: 200px;
+}
+
+.social-media li{
+    width: 36px;
+    height: 36px;
+    margin-left: 11px;
+}
+
+.social::before{
+    position: absolute;
+    content: " ";
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.twitter::before {
+    background-image: url(../img/twitter.svg);
+    width: 32px;
+    height: 32px;
+}
+
+.instagram::before {
+    background-image: url(../img/instagram.svg);
+    width: 32px;
+    height: 32px;
+}
+
+.facebook::before {
+    background-image: url(../img/facebook.svg);
+    width: 32px;
+    height: 32px;
+}
+
+.vk::before {
+    background-image: url(../img/vk.svg);
+    width: 32px;
+    height: 32px;
 }
 
 .footer-info{
@@ -1411,7 +1578,16 @@ a {
 }
 
 .provider{
-    font-weight: 700;    /*потом вставлю псевдоэлементом сердце*/
+    position: relative;
+    font-weight: 700;
+}
+
+.provider::before{
+    position: absolute;
+    content: "❤️";
+    width: 13px;
+    height: 15px;
+    left: 20px;
 }
 
 .footer-copyright p {
