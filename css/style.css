@@ -165,6 +165,19 @@ a {
     color: #ffffff;
 }
 
+/*.overlay{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;  Странно, но оверлей почему-то все изображение блокирует, даже , когда он выключен
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 9;
+}*/
+
 .visually-hidden {
      position: absolute;
     width: 1px;
@@ -648,14 +661,38 @@ a {
     background-image: url(../img/cart-hover.svg);
 }
 
-
-
-.full-cart {
+.full-cart{
+    margin-left: 20px;
+    position: relative;
     color: #323232;
 }
 
+.full-cart-list{
+    position: relative;
+    padding-left: 40px;
+}
+
+.full-cart-list::before{
+    position: absolute;
+    content: " ";
+    width: 21px;
+    height: 19px;
+    left: 10px;
+    bottom: 8px;
+    background-image: url(../img/fullcart-hover.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.full-cart-list:hover::before{
+    background-color: #ffffff;
+    background-image: url(../img/fullcart.svg);
+}
+
+
 .cart-section {
     display: none;
+    margin-top: 8px;
     z-index: 6;
     width: 540px;
     margin-left: -500px;
@@ -753,6 +790,18 @@ a {
 
 /* Сортировка (|CATALOG|)
      ========================================================================== */
+
+.sorting-menu {
+    width: 860px;
+    margin-left: 0px;
+    margin-right: auto;
+}
+
+.sorting-menu fieldset {
+    padding: 0px;
+}
+
+
 .sort {
     display: flex;
     flex-wrap: wrap;
@@ -768,11 +817,13 @@ a {
 
 .sort-popularity select {
     align-self: center;
-    padding: 12px 16px;
+    padding: 10px 16px;
     background-color: rgba(255, 255, 255, 0.2);
     color: #ffffff;
     border: none;
     border-radius: 50px;
+    margin-top: 8px;
+    margin-right: 14px;
 }
 
 .sort-popularity select:hover {
@@ -783,6 +834,78 @@ a {
 .sort-popularity option {
     background-color: #ffffff;
     color: #323232;
+}
+
+.radio-option {
+    position: relative;
+}
+
+
+.radio-option label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    padding-left: 35px;
+    padding-top: 5px;
+}
+
+.radio-option label::before{
+    position: absolute;
+    content: " ";
+    width: 18px;
+    height: 18px;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    top: 0px;
+    left: 0px;
+}
+
+.filter-input-radio:checked + label::after {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    left: 7px;
+    bottom: 4px;
+    border-radius: 50%;
+}
+
+.select-option {
+    position: relative;
+}
+
+
+.select-option label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    padding-left: 35px;
+    padding-top: 5px;
+}
+
+.select-option label::before{
+    position: absolute;
+    content: " ";
+    width: 19px;
+    height: 20px;
+    border: 2px solid rgba(255,255,255, 0.8);
+    border-radius: 3px;
+    top: 0px;
+    left: 0px;
+}
+
+.filter-input-checkbox:checked + label::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/checkbox-on.svg);
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 20px;
+    top: 0px;
+    left: 0px;
 }
 
 .min-input,
@@ -799,8 +922,13 @@ a {
 
 .sort-prices-filter {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     color: #ffffff;
+}
+
+.price-top {
+    display: flex;
+    flex-direction: row;
 }
 
 .sort-price{
@@ -816,9 +944,10 @@ a {
     border: none;
 }
 
+
 .range-controls {
     position: relative;
-
+    bottom: 10px;
 }
 
 .range-controls .scale {
@@ -852,16 +981,30 @@ a {
     cursor: pointer;
 }
 
+.range-toggle-max {
+    right: 0px;
+    top: 11px;
+    margin-right: 60px;
+}
+
+.range-toggle-min{
+    left: 0px;
+    top: 11px;
+    margin-left: 26px;
+}
+
 .sort-fats-filter{
     display: flex;
     width: 48%;
+    margin-right: 0px;
+    margin-left: auto;
 }
 
 .sort-fat {
-    margin-top:5px;
+    margin-top: 7px;
     display: flex;
     list-style: none;
-    padding: 12px 16px;
+    padding: 10px 16px;
     justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50px;
@@ -869,7 +1012,7 @@ a {
 
 .sort-insides-filter{
     display: flex;
-    width: 81.7%;
+    width: 83%;
 }
 
 .sort-inside {
@@ -878,17 +1021,21 @@ a {
     list-style: none;
     justify-content: space-between;
     padding: 12px 16px;
+    padding-top: 8px;
     border-radius: 50px;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
 .sort-btn {
+    margin-top: 8px;
     align-self: center;
     padding: 11px 16px;
     border: 2px solid #ffffff;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50px;
     color: #ffffff;
+    margin-left: auto;
+    margin-right: 0px;
 }
 
 .sort-btn:hover {
@@ -899,6 +1046,14 @@ a {
 .sort-btn:active {
     box-shadow: inset 0 2px 1px #696969;
     background-color: #ededed;
+}
+
+.pagination a {
+    padding:
+}
+
+.pagination::after {
+
 }
 
 /* Слайдер |INDEX|
@@ -913,11 +1068,16 @@ a {
     display: none;
 }
 
+.slider-list{
+    padding: 0px;
+    margin: 0px;
+}
+
 .slider-item p {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    width: 82%;
+    width: 85%;
     font-size: 60px;
     font-weight: 700;
     line-height: 60.35px;
@@ -931,7 +1091,6 @@ a {
     font-weight: 700;
     line-height: 44px;
 }
-
 
 .slider-controls label {
     display: inline-block;
@@ -950,6 +1109,7 @@ a {
     bottom:63px;
     z-index: 20;
     font-size: 0;
+
 }
 
 #slide-1:checked ~ .site-wrapper {
@@ -977,6 +1137,18 @@ a {
 #slide-2:checked ~ .site-wrapper label[for="slide-2"],
 #slide-3:checked ~ .site-wrapper label[for="slide-3"] {
   background-color: #ffffff;
+}
+
+#slide-1:checked:hover ~ .site-wrapper label[for="slide-1"],
+#slide-2:checked:hover ~ .site-wrapper label[for="slide-2"],
+#slide-3:checked:hover ~ .site-wrapper label[for="slide-3"] {
+  background-color: #ffffff;
+}
+
+#slide-1:hover ~ .site-wrapper label[for="slide-1"],
+#slide-2:hover ~ .site-wrapper label[for="slide-2"],
+#slide-3:hover ~ .site-wrapper label[for="slide-3"] {
+  background-color: #b2c1b7;
 }
 
 /* Бонусы при покупке |INDEX|
@@ -1042,6 +1214,27 @@ a {
 
 /* Товар |INDEX| |CATALOG|
      ========================================================================== */
+
+.product-container{
+    min-width: 886px;
+    max-width: 1186px;
+    margin: 0px auto;
+    padding: 0px 7px;
+}
+
+.product {
+    position: relative;
+    margin: 0px;
+    margin-bottom: -70px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 22.5%;
+    list-style: none;
+    padding: 0px 1.1%;
+    padding-bottom: 16px;
+}
+
 .product-hits .product:before{
     position: absolute;
     content: " ";
@@ -1052,14 +1245,15 @@ a {
     top: 10px;
 }
 
-.product-hits .product:nth-child(4n+1):before{
+/*.product-hits .product:nth-child(4n+1):before{
     left: 13px;
-}
+}*/
 
 .assortment-product{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%
     margin: 0px;
     padding: 0px;
@@ -1075,35 +1269,23 @@ a {
     margin-top: 30px;
 }
 
-.product {
-    position: relative;
-    margin:0px;
-    margin-bottom: -70px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 23%;
-	list-style: none;
-    padding: 0px 13px;
-    padding-bottom: 16px;
-}
 
 .product h3{
     margin: 0px;
     order: 1;
 }
 
-.product:nth-child(4n+1){
+/*.product:nth-child(4n+1){
     padding: 0px;
-    padding-right: 13px;
+    padding-right: 1.1%;
     padding-bottom: 16px;
 }
 
 .product:nth-child(4n){
     padding: 0px;
     padding-bottom: 16px;
-    padding-left: 13px;
-}
+    padding-left: 1.1%;
+}*/
 
 
 .product-btn{
@@ -1135,12 +1317,11 @@ a {
 	font-size: inherit;
     font-weight: 500;
 }
-.product-description::after {
-    content: "";
-    display: block;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.2);
+
+.product-description span {
+    /*box-shadow: 0 0 0 2px rgba(255,255,255, 0.3); по идее подчеркивание, но не работает в данный момент*/
 }
+
 .product-price {
     display: flex;
     margin-top: -70px;
@@ -1151,7 +1332,11 @@ a {
     text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
 }
 
-.product-price span {
+.product-price span{
+    font-size: 38px;
+}
+
+.product-price span:last-child {
 	font-size: 30px;
 }
 
@@ -1159,7 +1344,7 @@ a {
 .product:focus{
         border-radius: 5px;
         background-color: rgba(255, 255, 255, 0.2);
-    }
+}
 
 .product:hover .product-btn,
 .product:hover + .product-btn,
@@ -1173,8 +1358,9 @@ a {
 }
 
 
-/* Преймущества |INDEX|
-     ========================================================================== */
+/*Преймущества |INDEX|
+     ==========================================================================
+*/
 
 .advantages {
     margin-top: 20px;
@@ -1197,75 +1383,79 @@ a {
     padding: 0px;
     padding-top: 15px;
     padding-left: 20px;
-    margin-bottom: -10px;
     font-size: 24px;
     font-weight: 500;
     line-height: 30px;
 }
 
 .advantages-description{
+    margin-top: 0px;
     padding: 0px;
     flex-direction: row;
     display: flex;
     flex-wrap: wrap;
 }
 
-.advantages-description li {
+.advantages-dicription-item {
     position: relative;
-    margin-left: 56px;
     display: flex;
-    width: 40%;
-    padding-top:20px;
-    padding-left: 20px;
+    width: 45%;
+    padding-top:30px;
+    padding-left: 30px;
 	list-style: none;
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
 }
 
-.icecream-dicription::before{
+.advantages-dicription-item span {
+    margin-left: 56px;
+}
+
+.icecream::before {
     position: absolute;
     content: " ";
     background-image: url(../img/icecream.svg);
     background-repeat: no-repeat;
     width:49px;
     height: 49px;
-    margin-left: -58px;
-    margin-top: -20px;
+    left: 22px;
+    top: 10px;
 }
 
-.ingrodient-discription::before{
+.cow::before {
     position: absolute;
     content: " ";
     background-image: url(../img/cow.svg);
     background-repeat: no-repeat;
     width:49px;
     height: 49px;
-    margin-left: -58px;
-    margin-top: -20px;
+    left: 22px;
+    top: 10px;
 }
 
-.quality-discription::before{
+.ingrodient::before {
     position: absolute;
     content: " ";
-    background-image: url(../img/leaf.svg);
+     background-image: url(../img/leaf.svg);
     background-repeat: no-repeat;
     width:49px;
     height: 49px;
-    margin-left: -58px;
-    margin-top: -20px;
+    left: 22px;
+    top: 10px;
 }
 
-.delivery-discription::before{
+.temperature::before {
     position: absolute;
     content: " ";
     background-image: url(../img/temperature.svg);
     background-repeat: no-repeat;
     width:49px;
     height: 49px;
-    margin-left: -58px;
-    margin-top: -20px;
+    left: 22px;
+    top: 10px;
 }
+
 
 /* Блог и подписка |INDEX|
      ========================================================================== */
@@ -1288,7 +1478,7 @@ a {
     background-position: right center;
     width: 48.5%;
     border-radius: 15px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .blog p {
@@ -1300,7 +1490,6 @@ a {
     font-weight: 500;
     line-height: 22px;
     color: #323232;
-    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .blog b {
@@ -1316,17 +1505,28 @@ a {
     text-decoration-color: #323232;
 }
 
+.blog span{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
 .subscription {
-    margin-left: 10px;
-    padding-left: 20px;
     display: flex;
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
     color: #323232;
     width: 48.5%;
-    background-color: #f8f7f4;
+    background-repeat: repeat;
+    background: linear-gradient(135deg, #f8f7f4 12.5%,#92cdff 12.5%, #92cdff 25%, #f8f7f4 25%, #f8f7f4 37.5%, #fe9e90 37.5%, #fe9e90 50%, #f8f7f4 50%, #f8f7f4 50%, #f8f7f4 62.5%, #92cdff 62.5%, #92cdff 75%, #f8f7f4 75%, #f8f7f4 87.5%, #fe9e90 87.5%);
+    background-size: 30px 30px;
     border-radius: 15px;
+}
+
+.subscription form{
+    margin: 6px;
+    background-color: #f8f7f4;
+    padding-left: 20px;
+    border-radius: 10px;
 }
 
 .subscription p{
@@ -1421,6 +1621,7 @@ a {
     font-weight: 500;
     line-height: 28px;
     color: #323232;
+    margin-left: 25px;
 }
 
 .feedback input[type="text"],
@@ -1453,6 +1654,48 @@ a {
     line-height: 24px;
 }
 
+
+.feedback {
+    display: none;
+    position: fixed;
+    top: 120px;
+    left: 50%;
+    margin-left: -230px;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background-color: #f8f7f4;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.feedback-send-btn {
+    position: absolute;
+    right: 24px;
+    bottom: 40px;
+    padding: 12px 24px;
+}
+
+.feedback-close-btn {
+    position: absolute;
+    visibility: hidden;
+    width: 17px;
+    height: 17px;
+    top: 16px;
+    right: 17px;
+}
+
+.feedback-close-btn::before {
+    visibility: visible;
+    position: absolute;
+    content: " ";
+    background-image: url(../img/x.svg);
+    background-size: cover;
+    width: 17px;
+    height: 17px;
+    right: 6px;
+}
+
 /* ПАГИНАЦИЯ
      ========================================================================== */
 .pagination-list{
@@ -1480,48 +1723,77 @@ a {
 }
 
 .social-media{
-    border: 1px solid red;
     display: flex;
     padding-left: 0px;
     width: 200px;
 }
 
-.social-media li{
-    width: 36px;
-    height: 36px;
-    margin-left: 11px;
+.social{
+    margin-top: 16px;
+    margin-right: 11px;
+    opacity: 0.8;
 }
 
-.social::before{
-    position: absolute;
-    content: " ";
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-}
-
-.twitter::before {
+.twitter{
     background-image: url(../img/twitter.svg);
-    width: 32px;
-    height: 32px;
+    height: 34px;
+    width: 34px;
+    display: inline-block;
+    border: 4px solid #cccccc;
+    border-radius: 50%;
+    background-image:
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 108%;
 }
 
-.instagram::before {
+
+.instagram{
     background-image: url(../img/instagram.svg);
-    width: 32px;
-    height: 32px;
+    height: 34px;
+    width: 34px;
+    display: inline-block;
+    border: 4px solid #cccccc;
+    border-radius: 50%;
+    background-image:
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 108%;
 }
 
-.facebook::before {
+.facebook{
     background-image: url(../img/facebook.svg);
-    width: 32px;
-    height: 32px;
+    height: 34px;
+    width: 34px;
+    display: inline-block;
+    border: 4px solid #cccccc;
+    border-radius: 50%;
+    background-image:
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 108%;
 }
 
-.vk::before {
+.vk{
     background-image: url(../img/vk.svg);
-    width: 32px;
-    height: 32px;
+    height: 34px;
+    width: 34px;
+    display: inline-block;
+    border: 4px solid #cccccc;
+    border-radius: 50%;
+    background-image:
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 108%;
+}
+
+.social:hover{
+    opacity: 1;
+}
+
+.social:active{
+    border-color: #ffffff;
+    opacity: 0.7;
 }
 
 .footer-info{
@@ -1529,12 +1801,11 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
-    width: 360px;
+    width: 380px;
 }
 
 .footer-info li{
-    margin-right: 0px;
-    margin-left: 45px;
+    width: 170px;
 }
 
 .footer-copyright{
@@ -1543,28 +1814,24 @@ a {
     align-self: flex-end;
 }
 
-
 .social-media,
 .footer-info {
     list-style: none;
 }
-
 
 .footer-info-link {
     display: inline-block;
     font-size: 13px;
     font-weight: 400;
     line-height: 18px;
+    padding-top: 7px;
 }
+
 .footer-info-link::after {
     content: "";
     display: block;
     height: 1px;
     background-color: rgba(255, 255, 255, 0.2);
-}
-
-.documents{
-    margin-left: -12px;
 }
 
 .footer-info-link:hover,
@@ -1584,10 +1851,9 @@ a {
 
 .provider::before{
     position: absolute;
-    content: "❤️";
-    width: 13px;
-    height: 15px;
-    left: 20px;
+    content: " ";
+    background-image: url(../img/black-heart.svg);
+    background-repeat: no-repeat;
 }
 
 .footer-copyright p {
