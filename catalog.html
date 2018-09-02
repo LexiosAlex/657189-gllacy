@@ -33,7 +33,7 @@
                 </ul>
                 <ul class="user-navigation">
                     <li class="search">
-                        <a class="user-navigation-item search-list" href="#">Поиск</a>
+                        <a class="user-navigation-item search-list" href="#"><span class="visually-hidden">Поиск</span></a>
                         <section class="search-section">
                             <h3 class="visually-hidden">Форма поиска по сайту</h3>
                             <form action="https://echo.htmlacademy.ru">
@@ -71,22 +71,22 @@
                             <h3 class="visually-hidden">Корзина</h3>
                             <ul class="full-cart-items">
                                 <li class="full-cart-item">
-                                    <button class="removebtn" type="button">Убрать товар</button>
+                                    <button class="removebtn remove-item-1" type="button"><span class="visually-hidden">Убрать товар</span></button>
                                     <img src="img/orange.jpg" width="35" height="35" alt="Изображение первого товара">
                                     <p class="full-cart-description">Пломбир с апельсиновым джемом</p>
                                     <p>1,5кг x <span>200 руб.</span></p>
                                     <p>300 руб.</p>
                                 </li>
                                 <li class="full-cart-item">
-                                    <button class="removebtn" type="button">Убрать товар</button>
+                                    <button class="removebtn remove-item-2" type="button"><span class="visually-hidden">Убрать товар</span></button>
                                     <img src="img/strawberry.jpg" width="35" height="35" alt="Изображение второго товара">
                                     <p class="full-cart-description">Клубничный пломбир с присыпкой из белого шоколада</p>
                                     <p>1,5кг x <span>300 руб.</span></p>
                                     <p>450 руб.</p>
                                 </li>
                             </ul>
-                        <p class="full-cart-final-price">Итого: 750 руб</p>
-                        <a class="btn" href="">Оформить заказ</a>
+                        <p class="cart-final-price">Итого: 750 руб</p>
+                        <p><a class="btn checkout-btn" href="">Оформить заказ</a></p>
                         </section>
                     </li>
                 </ul>
@@ -249,7 +249,7 @@
                     <a class="btn product-btn">Быстрый просмотр</a>
         		</li>
         		<li class="product">
-        			<a class="product-description" href="#"><h3><span>Сливочное с ментоловым сиропом</h3></span></a>
+        			<a class="product-description" href="#"><h3><span>Сливочное с ментоловым сиропом</span></h3></a>
         			<p class="product-image"><img src="img/mentol.jpg" width="267" height="267" alt="Ментол"></p>
         			<p class="product-price">435<span>₽</span><span>/кг</span></p>
                     <a class="btn product-btn">Быстрый просмотр</a>
@@ -273,18 +273,18 @@
         <div class="pagination-list">
             <div class="container">
         	<ul class="pagination">
-                <li><a href="#">Назад</a></li>
-                <li><a href="#">1</a></li>
+                <li><a href="#"><span class="visually-hidden">Назад</span></a></li>
+                <li><a class="page-active"  href="#">1</a></li>
                 <li><a href="#">2</a></li>
                 <li><a href="#">3</a></li>
                 <li><a href="#">4</a></li>
                 <li><a href="#">5</a></li>
-                <li><a href="#">Вперёд</a></li>
+                <li><a href="#"><span class="visually-hidden">Вперёд</span></a></li>
             </ul>
             </div>
         </div>
     </main>
-    <footer class="main-footer">
+        <footer class="main-footer">
             <div class="container">
             <h3 class="visually-hidden">Подпишитесь на нас в соц.сетях</h3>
             <ul class="social-media">
@@ -305,7 +305,7 @@
                 <a class="copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss">
                     <img src="img/html-academy-logo.svg" width="128" height="39" alt="Логотип HTML-Академии">
                 </a>
-                <p>Сделанно в <a href="https://htmlacademy.ru/">HTML Academy</a> © 2017</p>
+                <p>Сделанно в <a class="copyright-link" href="https://htmlacademy.ru/">HTML Academy</a> © 2017</p>
             </div>
             </div>
         </footer>
