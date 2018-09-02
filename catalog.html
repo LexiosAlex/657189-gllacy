@@ -5,6 +5,7 @@
 	<title>HTML Academy: Глейси-меню</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=latin,cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
 	 <header class="main-header">
@@ -273,15 +274,32 @@
         <div class="pagination-list">
             <div class="container">
         	<ul class="pagination">
-                <li><a href="#"><span class="visually-hidden">Назад</span></a></li>
-                <li><a class="page-active"  href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#"><span class="visually-hidden">Вперёд</span></a></li>
-            </ul>
+                <li class="pagination-item disable">
+                    <a href="#"><span class="visually-hidden">Назад</span></a>
+                </li>
+                <li class="pagination-item current">
+                    <a class="page-active" href="#">1</a>
+                </li>
+                <li class="pagination-item">
+                    <a href="#">2</a>
+                </li>
+                <li class="pagination-item">
+                    <a href="#">3</a>
+                </li>
+                <li class="pagination-item">
+                    <a href="#">4</a>
+                </li>
+                <li class="pagination-item">
+                    <a href="#">5</a>
+                </li>
+                <li class="pagination-item">
+                    <a href="#"><span class="visually-hidden">Вперёд</span></a>
+                </li>
+                </ul>
             </div>
+        </div>
+        <div class="container">
+            <div class="catalog-border"></div>
         </div>
     </main>
         <footer class="main-footer">
