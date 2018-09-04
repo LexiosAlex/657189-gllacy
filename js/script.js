@@ -1,8 +1,7 @@
 
     // Функция ymaps.ready() будет вызвана, когда
     // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-    ymaps.ready(init);
-    function init(){
+        ymaps.ready(function () {
         // Создание карты.
         var myMap = new ymaps.Map("map", {
             // Координаты центра карты.
@@ -15,14 +14,24 @@
             zoom: 16
         });
 
-       var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {
-                hintContent: 'Ул.Большая Конюшенная 19/8, Санкт-Петербург',
-                balloonContent: 'с 10 до 20 ежедневно'
-
-            });
-
-            myMap.geoObjects.add(myPlacemark);
-        }
+        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {
+            hintContent: 'Ул.Большая Конюшенная 19/8, Санкт-Петербург',
+            balloonContent: 'с 10 до 20 ежедневно'
+        },
+        {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/mappin.svg',
+            // Размеры метки.
+            iconImageSize: [85, 140],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-50, -140]
+        });
+        myMap.geoObjects.add(myPlacemark);
+    })
 
 
 var link = document.querySelector(".adress-btn");
@@ -57,3 +66,4 @@ var feedback_form = popup.querySelector("form");
         popup.classList.add("modal-error");
     }
     });
+

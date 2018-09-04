@@ -118,7 +118,7 @@ a {
 .main-navigation {
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 81%;
 }
 
 .container {
@@ -136,7 +136,7 @@ a {
 .main-header-logo {
     width: 13.5%;
     margin-right: 24px;
-    padding-top: 15px;
+    padding-top: 8px;
 }
 
 .main-header {
@@ -146,24 +146,30 @@ a {
 .site-navigation {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 0;
     margin-top: 24px;
-    margin-right: 88px;
+    margin-right: 48px;
     margin-right: auto;
-    margin-bottom: 20px;
+
     padding: 0;
 }
 
 .user-navigation {
+    width: 36%;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
     margin-top: 24px;
     margin-right: 0;
     margin-left: 0;
+    margin-bottom: 0px;
     padding: 0;
 }
 
 .working-time {
+
     margin-left: auto;
 
     text-align: right;
@@ -171,7 +177,7 @@ a {
 
 .working-time p {
     margin: 0;
-    margin-top: 8px;
+    margin-bottom: 8px;
     padding: 0;
 }
 
@@ -188,8 +194,9 @@ a {
 .site-navigation-item {
     display: block;
     padding: 7px 14px 8px 13px;
+    margin-left: 1px;
 
-    border-radius: 15px;
+    border-radius: 50px;
 }
 
 .site-navigation-item::after {
@@ -223,7 +230,6 @@ a {
 
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 15px;
-    /*margin-left: 20px;*/
 }
 
 .user-navigation-item:hover,
@@ -329,6 +335,12 @@ a {
     line-height: 16px;
 }
 
+.working-time p:last-child {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 16px;
+}
+
 /* Поиск
      ========================================================================== */
 .search {
@@ -399,15 +411,15 @@ a {
 .login {
     position: relative;
 
-    margin-left: 20px;
+    margin-left: 12px;
 }
 
 .login-list {
-    padding-left: 35px;
+    padding-left: 42px;
 
     background-image: url("../img/login.svg");
     background-repeat: no-repeat;
-    background-position: 8px 7px;
+    background-position: 13px 6px;
 }
 
 .login-list:hover,
@@ -504,7 +516,7 @@ a {
 .cart {
     position: relative;
 
-    margin-left: 20px;
+    margin-left: 11px;
 }
 
 .full-cart a {
@@ -514,11 +526,11 @@ a {
 .cart-list {
     position: relative;
 
-    padding-left: 35px;
+    padding-left: 42px;
 
     background-image: url("../img/cart.svg");
     background-repeat: no-repeat;
-    background-position: 8px 7px;
+    background-position: 14px 6px;
 }
 
 .cart-list:hover,
@@ -607,11 +619,6 @@ a {
     line-height: 18px;
 }
 
-.working-time p:last-child {
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 16px;
-}
 
 .removebtn {
     width: 11px;
@@ -1081,7 +1088,8 @@ a {
 }
 
 .slider-item p {
-    width: 85%;
+    width: 80%;
+    margin-top:55px;
     margin-right: auto;
     margin-left: auto;
 
