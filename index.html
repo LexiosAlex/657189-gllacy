@@ -6,6 +6,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=latin,cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+    </script>
 </head>
 <body>
     <input class="visually-hidden slide-1-checker" type="radio" id="slide-1" name="slider-control" checked>
@@ -194,7 +196,7 @@
             <section class="location">
                 <h2 class="visually-hidden">Контактая информация</h2>
                 <div class="map-container">
-                <section class="map-api">
+                <section class="map-api" id="map">
                     <img class="visually-hidden" src="img/map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
                     <div class="adress">
                         <p>Адрес главного офиса и офлайн-магазина:</p>
@@ -256,5 +258,6 @@
                 </form>
             </section>
         </div>
+        <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
