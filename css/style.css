@@ -29,7 +29,7 @@ a {
     left: 0;
     z-index: 9;
 
-    display: none;
+    display: block;
     width: 100%;
     height: 100%;
 
@@ -118,7 +118,7 @@ a {
 .main-navigation {
     display: flex;
     flex-direction: row;
-    width: 81%;
+    width: 86%;
 }
 
 .container {
@@ -134,9 +134,9 @@ a {
 }
 
 .main-header-logo {
-    width: 13.5%;
-    margin-right: 24px;
     padding-top: 8px;
+    width: 50px;
+    margin:0px;
 }
 
 .main-header {
@@ -148,22 +148,25 @@ a {
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0;
+
     margin-top: 24px;
-    margin-right: 48px;
-    margin-right: auto;
+    margin-left: 0px;
+    /*margin-right: 48px;*/
+    margin-right: 0px;
 
     padding: 0;
 }
 
 .user-navigation {
-    width: 36%;
+    width: 30%;
+    min-width: 250px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
 
     margin-top: 24px;
     margin-right: 0;
-    margin-left: 0;
+    margin-left: auto;
     margin-bottom: 0px;
     padding: 0;
 }
@@ -1088,7 +1091,7 @@ a {
 }
 
 .slider-item p {
-    width: 80%;
+    width: 670px;;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-right: auto;
@@ -1112,6 +1115,10 @@ a {
     font-size: 32px;
     line-height: 44px;
     text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+}
+
+.slide-3 p{
+    width: 650px;
 }
 
 .slider-controls label {
@@ -1180,7 +1187,7 @@ a {
      ========================================================================== */
 .special {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 42px;
 }
 
 .special > .container {
@@ -1189,7 +1196,7 @@ a {
 
 .special h3 {
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
     padding: 0;
 
     font-weight: 700;
@@ -1201,6 +1208,7 @@ a {
     max-width: 515px;
     margin: 0;
     padding: 0;
+    margin-top: 5px;
 
     font-weight: 700;
     font-size: 18px;
@@ -1213,9 +1221,10 @@ a {
     width: 48.5%;
     margin-right: 8px;
     padding-right: 20px;
-    padding-left: 18px;
-    padding-top: 20px;
+    padding-left: 19px;
+    padding-top: 18px;
     padding-bottom: 25px;
+    min-height: 188px;
 
 
     background-color: #af2d4d;
@@ -1229,11 +1238,12 @@ a {
     display: flex;
     flex-direction: column;
     width: 48.5%;
-    margin-left: 15px;
-    padding-top: 20px;
+    margin-left: 18px;
+    padding-top: 18px;
     padding-right: 20px;
-    padding-left: 18px;
+    padding-left: 19px;
     padding-bottom: 25px;
+    min-height: 188px;
 
     background-color: #41271a;
     background-image: url("../img/chocolatebg.jpg");
@@ -1244,7 +1254,8 @@ a {
 
 .special-btn {
     align-self: flex-end;
-    margin-top: 22px;
+    margin-top: auto;
+    margin-bottom: 0px;
     padding: 10px 24px;
 }
 
@@ -1301,10 +1312,14 @@ a {
 }
 
 .product-hits {
+    width: 99%;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 0;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 30px;
     padding: 0;
 }
@@ -1343,7 +1358,7 @@ a {
     display: flex;
     order: 1;
     margin-bottom: 16px;
-    width: 95%;
+    width: 96%;
 }
 
 .product-description span {
@@ -1356,8 +1371,8 @@ a {
 
 .product-price {
     display: flex;
-    margin-top: -65px;
-    margin-bottom: 30px;
+    margin-top: -57px;
+    margin-bottom: 22px;
 
     font-weight: 700;
     font-size: 45px;
@@ -1367,11 +1382,13 @@ a {
 
 .product-price span {
     /*font-size: 40px;*/
-    font-size: 45px
-    text-transform: lowercase;
+    margin-left: 2px;
+    font-size: 43px;
+    margin-top: 2px;
 }
 
 .product-price span:last-child {
+    margin-top: 6px;
     font-size: 30px;
     /*font-size: 45px;*/
     text-transform: lowercase;
@@ -1443,14 +1460,20 @@ a {
 
     display: flex;
     width: 46.5%;
-    padding-top: 22px;
-    padding-left: 20px;
+    padding-top: 25px;
+    /*padding-left: 15px;*/
+    margin-left: 20px;
 
 
     list-style: none;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
+}
+
+.advantages-dicription-item:nth-child(2n){
+
+    margin-left: 35px;
 }
 
 .advantages-dicription-item span {
@@ -1464,8 +1487,8 @@ a {
 .icecream::before {
     content: " ";
     position: absolute;
-    top: 8px;
-    left: 20px;
+    top: 10px;
+    left: 0px;
 
     width: 49px;
     height: 49px;
@@ -1477,8 +1500,8 @@ a {
 .cow::before {
     content: " ";
     position: absolute;
-    top: 8px;
-    left: 20px;
+    top: 10px;
+    left: 0px;
 
     width: 49px;
     height: 49px;
@@ -1490,8 +1513,8 @@ a {
 .ingrodient::before {
     content: " ";
     position: absolute;
-    top: 8px;
-    left: 20px;
+    top: 10px;
+    left: 0px;
 
     width: 49px;
     height: 49px;
@@ -1503,8 +1526,8 @@ a {
 .temperature::before {
     content: " ";
     position: absolute;
-    top: 8px;
-    left: 20px;
+    top: 10px;
+    left: 0px;
 
     width: 49px;
     height: 49px;
@@ -1529,6 +1552,7 @@ a {
 .blog {
     display: flex;
     width: 49%;
+    min-height: 220px;
     margin-right: 26px;
 
     background-color: #ffffff;
@@ -1591,6 +1615,9 @@ a {
 }
 
 .subscription form {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
     margin: 6px;
     padding: 0;
 
@@ -1600,25 +1627,27 @@ a {
 
 .subscription p {
     margin-left: 18px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
     font-size: 16px;
 
 }
 
 .subscription-description {
-    margin-top: 27px;
-    color: #5a5a5a;             /*По-идее тут нужен white space, но я хз, как его добавитть, чтобы надпись была как на макете*/
-    width: 90%;
+    margin-top: 30px;
+    color: #5a5a5a;
+    width: 93%;
 }
 
 .subscription p:last-of-type{
+
     display: flex;
-    margin-top: 15px;
-    margin-bottom: 30px;
+    margin-top: auto;
+
+    margin-bottom: 32px;
 }
 
 .subscription input[type="email"] {
-    width: 55%;
+    width: 70%;
     height: 41px;
     padding-left: 15px;
     margin-right: 5px;
@@ -1635,7 +1664,7 @@ a {
 .subscription-btn {
     display: flex;
     margin-right: 20px;
-    margin-left: auto;
+    margin-left: 10px;
     padding: 10px 17px;
 }
 
@@ -1646,7 +1675,7 @@ a {
 /* Адресс и карта |INDEX|
      ========================================================================== */
 .map-container {
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 0;
 }
@@ -1654,7 +1683,7 @@ a {
 .map-api {
     display: flex;
     flex-direction: row-reverse;
-    max-width: 1200px;
+    max-width: 1440px;
     height: 430px;
     margin-top: 40px;
 
@@ -1722,7 +1751,9 @@ a {
      ========================================================================== */
 
 .feedback p {
+    margin: 0px;
     margin-left: 25px;
+    margin-top: 15px;
 
     font-weight: 500;
     font-size: 24px;
@@ -1732,8 +1763,9 @@ a {
 
 .feedback input[type="text"],
 .feedback input[type="email"] {
-    width: 267px;
-    height: 44px;
+    margin-top: 4px;
+    width: 250px;
+    height: 41px;
     padding-left: 15px;
 
     font-weight: 400;
@@ -1744,16 +1776,19 @@ a {
     border: 1px solid rgba(178, 178, 178, 0.52);
     border-radius: 5px;
 }
+
 .feedback input[type="text"]:hover,
 .feedback input[type="email"]:hover {
     box-shadow: inset 0 0 0 1px rgba(154, 154, 154, 0.52);
 }
 
 .feedback textarea {
-    width: 428px;
-    height: 155px;
-    padding-top: 13px;
+    width: 410px;
+    height: 140px;
+    margin-top: 5px;
+    padding-top: 10px;
     padding-left: 15px;
+    margin-right: 25px;
 
     font-weight: 400;
     font-size: 16px;
@@ -1767,25 +1802,25 @@ a {
 
 .feedback {
     position: fixed;
-    top: 120px;
+    top: 340px;
     left: 50%;
     z-index: 10;
 
     align-items: center;
-    width: 500px;
-    height: 500px;
-    margin-left: -230px;
+    margin-left: -240px;
+    min-height: 440px;
 
     background-color: #f8f7f4;
     border-radius: 10px;
 }
 
 .feedback-send-btn {
-    position: absolute;
-    right: 24px;
-    bottom: 40px;
+    display: flex;
+    margin-top: 20px;
+    margin-right: 25px;
+    margin-left: auto;
 
-    padding: 12px 24px;
+    padding: 10px 24px;
 }
 
 .feedback-close-btn {
@@ -1803,7 +1838,8 @@ a {
 .feedback-close-btn::before {
     content: " ";
     position: absolute;
-    right: 6px;
+    right: 1px;
+    top: 2px;
 
     width: 17px;
     height: 17px;
