@@ -76,14 +76,14 @@
                                     <img src="img/orange.jpg" width="35" height="35" alt="Изображение первого товара">
                                     <p class="full-cart-description">Пломбир с апельсиновым джемом</p>
                                     <p>1,5кг x <span>200 руб.</span></p>
-                                    <p>300 руб.</p>
+                                    <p class="full-cart-price">300 руб.</p>
                                 </li>
                                 <li class="full-cart-item">
                                     <button class="removebtn remove-item-2" type="button"><span class="visually-hidden">Убрать товар</span></button>
                                     <img src="img/strawberry.jpg" width="35" height="35" alt="Изображение второго товара">
                                     <p class="full-cart-description">Клубничный пломбир с присыпкой из белого шоколада</p>
                                     <p>1,5кг x <span>300 руб.</span></p>
-                                    <p>450 руб.</p>
+                                    <p class="full-cart-price">450 руб.</p>
                                 </li>
                             </ul>
                         <p class="cart-final-price">Итого: 750 руб</p>
@@ -101,67 +101,67 @@
     <main>
         <div class="container">
         <ul class="way">
-            <li><a href="index.html"><span>Главная</span></a></li>
-            <li> » <a href=""><span>Каталог</span></a></li>
-            <li> » <a href="">Сливочное</a></li>
+            <li><a href="index.html"><span>Главная </span></a></li>
+            <li> » <a href=""><span> Каталог </span></a></li>
+            <li> » <a href=""> Сливочное</a></li>
         </ul>
         </div>
         <div class="container">
             <div class="sorting-menu">
-        <h1>Сливочное мороженное</h1>
-        <form class="sort" method="get" action="https://echo.htmlacademy.ru">
-            <fieldset class="sort-popularity">
-                <legend>Сортировка:</legend>
-                <select>
-                    <option>по популярности</option>
-                    <option>сначала дорогие</option>
-                    <option>сначала недорогие</option>
-                    <option>по жирности</option>
-                </select>
-            </fieldset>
-            <div class="sort-prices-filter">
-                <div class="price-top">
-                <p class="filter-price">Цена:</p>
-                <p class="sort-price">
-                    <label class="visually-hidden" for="price-min">Минимальная цена:</label>
-                    <input class="min-input" id="price-min" type="text" value="100" name="price_min">
-                    <span>руб. - </span>
-                    <label class="visually-hidden" for="price-max">Максимальная цена:</label>
-                    <input id="price-max" type="text" class="max-input" value="500" name="price_max">
-                    <span>руб.</span>
-                </p>
-                </div>
-                <div class="range-controls">
-                    <div class="scale-border">
-                        <div class="scale">
-                            <div class="bar"></div>
-                            <div class="range-toggle range-toggle-min"></div>
-                            <div class="range-toggle range-toggle-max"></div>
+                <h1>Сливочное мороженое</h1>
+                <form class="sort" method="get" action="https://echo.htmlacademy.ru">
+                    <fieldset class="sort-popularity">
+                        <legend>Сортировка:</legend>
+                        <select>
+                            <option>по популярности</option>
+                            <option>сначала дорогие</option>
+                            <option>сначала недорогие</option>
+                            <option>по жирности</option>
+                        </select>
+                    </fieldset>
+                    <div class="sort-prices-filter">
+                        <div class="price-top">
+                        <p class="filter-price">Цена:</p>
+                        <p class="sort-price">
+                            <label class="visually-hidden" for="price-min">Минимальная цена:</label>
+                            <input class="min-input" id="price-min" type="text" value="100" name="price_min">
+                            <span>руб. - </span>
+                            <label class="visually-hidden" for="price-max">Максимальная цена:</label>
+                            <input id="price-max" type="text" class="max-input" value="500" name="price_max">
+                            <span>руб.</span>
+                        </p>
+                        </div>
+                        <div class="range-controls">
+                            <div class="scale-border">
+                                <div class="scale">
+                                    <div class="bar"></div>
+                                    <div class="range-toggle range-toggle-min"></div>
+                                    <div class="range-toggle range-toggle-max"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <fieldset class="sort-fats-filter">
-                <legend>Жирность:</legend>
-                <ul class="sort-fat">
-                    <li class="radio-option">
-                        <input class="visually-hidden filter-input-radio" type="radio" name="radioSort" value="0%fat" id="fat0">
-                        <label for="fat0">0%</label>
-                    </li>
-                    <li class="radio-option">
-                        <input class="visually-hidden filter-input-radio" type="radio" name="radioSort" value="less10%fat" id="lfat10" checked>
-                        <label for="lfat10">до 10%</label>
-                    </li>
-                    <li class="radio-option">
-                        <input class="visually-hidden filter-input-radio" type="radio" name="radioSort" value="less30%fat" id="lfat30">
-                        <label for="lfat30">до 30%</label>
-                    </li>
-                    <li class="radio-option">
-                        <input class="visually-hidden filter-input-radio" type="radio" name="radioSort" value="more30%fat" id="mfat30">
-                        <label for="mfat30">выше 30%</label>
-                    </li>
-                </ul>
-            </fieldset>
+                    <fieldset class="sort-fats-filter">
+                        <legend>Жирность:</legend>
+                        <ul class="sort-fat">
+                            <li class="radio-option">
+                                <input class="visually-hidden filter-input-radio" type="radio" name="radioSort" value="0%fat" id="fat0">
+                                <label for="fat0">0%</label>
+                            </li>
+                            <li class="radio-option">
+                                <input class="visually-hidden filter-input-radio" type="radio" name="radioSort" value="less10%fat" id="lfat10" checked>
+                                <label for="lfat10">до 10%</label>
+                            </li>
+                            <li class="radio-option">
+                                <input class="visually-hidden filter-input-radio" type="radio" name="radioSort" value="less30%fat" id="lfat30">
+                                <label for="lfat30">до 30%</label>
+                            </li>
+                            <li class="radio-option">
+                                <input class="visually-hidden filter-input-radio" type="radio" name="radioSort" value="more30%fat" id="mfat30">
+                                <label for="mfat30">выше 30%</label>
+                            </li>
+                        </ul>
+                    </fieldset>
             <fieldset class="sort-insides-filter">
                 <legend>Наполнители:</legend>
                 <ul class="sort-inside">
