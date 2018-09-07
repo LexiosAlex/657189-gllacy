@@ -697,6 +697,7 @@ a {
 
     list-style: none;
     font-weight: normal;
+    white-space: pre;
 }
 
 
@@ -743,7 +744,6 @@ a {
 }
 
 .sorting-menu fieldset {
-    display: block;
     padding: 0;
 }
 
@@ -777,8 +777,7 @@ a {
 }
 
 .sort-popularity select {
-    -ms-grid-row-align: center;
-        align-self: center;
+    align-self: center;
     margin-top: 8px;
     margin-right: 14px;
     padding: 9px 12px;
@@ -818,13 +817,7 @@ a {
 
     cursor: pointer;
 
-    -webkit-user-select: none;
-
-       -moz-user-select: none;
-
-        -ms-user-select: none;
-
-            user-select: none;
+    user-select: none;
 }
 
 .radio-option label::before {
@@ -869,13 +862,7 @@ a {
 
     cursor: pointer;
 
-    -webkit-user-select: none;
-
-       -moz-user-select: none;
-
-        -ms-user-select: none;
-
-            user-select: none;
+    user-select: none;
 }
 
 .select-option label::before {
@@ -1040,8 +1027,7 @@ a {
 }
 
 .sort-btn {
-    -ms-grid-row-align: center;
-        align-self: center;
+    align-self: center;
     margin-top: 6px;
     margin-right: 0;
     margin-left: auto;
@@ -1119,8 +1105,7 @@ a {
 }
 
 .pagination-item:first-child > a {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 .pagination-item:first-child > a:hover {
     background-image: url("../img/page-arrow.svg");
@@ -1665,9 +1650,7 @@ a {
     color: #323232;
     text-decoration: underline;
 
-    -webkit-text-decoration-color: #323232;
-
-            text-decoration-color: #323232;
+    text-decoration-color: #323232;
 }
 
 .blog span {
@@ -1675,7 +1658,7 @@ a {
 }
 
 .subscription {
-    display: block;
+    display: flex;
     width: 49%;
 
     font-weight: 400;
@@ -1695,10 +1678,9 @@ a {
 .subscription form {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-content: space-between;
     margin: 6px;
     padding: 0;
-    min-height: 210px;
 
     background-color: #f8f7f4;
     border-radius: 10px;
@@ -1974,8 +1956,6 @@ a {
     display: flex;
     width: 200px;
     padding-left: 0;
-    align-self: flex-start;
-    margin-left: 0px;
 }
 
 .social {
@@ -2060,10 +2040,9 @@ a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-content: flex-start;
     width: 380px;
     padding-left: 10px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 
@@ -2154,50 +2133,20 @@ a {
 .copyright-link {
     text-decoration: underline;
 
-    -webkit-text-decoration-color: #b1c9bb;
-
-            text-decoration-color: #b1c9bb;
+    text-decoration-color: #b1c9bb;
 }
 
 .copyright-link:hover,
 .copyright-link:focus {
     color: #ffbc9e;
 
-    -webkit-text-decoration-color: #ffbc9e;
-
-            text-decoration-color: #ffbc9e;
-}
-
-@-webkit-keyframes shake {
-    0%,
-    100% {
-        -webkit-transform: translateX(0);
-                transform: translateX(0);
-    }
-
-    10%,
-    30%,
-    50%,
-    70%,
-    90% {
-        -webkit-transform: translateX(-10px);
-                transform: translateX(-10px);
-    }
-
-    20%,
-    40%,
-    60%,
-    80% {
-        -webkit-transform: translateX(10px);
-                transform: translateX(10px);
-    }
+    text-decoration-color: #ffbc9e;
 }
 
 @keyframes shake {
     0%,
     100% {
-        -webkit-transform: translateX(0);
-                transform: translateX(0);
+        transform: translateX(0);
     }
 
     10%,
@@ -2205,72 +2154,41 @@ a {
     50%,
     70%,
     90% {
-        -webkit-transform: translateX(-10px);
-                transform: translateX(-10px);
+        transform: translateX(-10px);
     }
 
     20%,
     40%,
     60%,
     80% {
-        -webkit-transform: translateX(10px);
-                transform: translateX(10px);
-    }
-}
-
-@-webkit-keyframes bounce {
-    0% {
-        -webkit-transform: translateY(-2000px);
-                transform: translateY(-2000px);
-    }
-
-    70% {
-        -webkit-transform: translateY(30px);
-                transform: translateY(30px);
-    }
-
-    90% {
-        -webkit-transform: translateY(-10px);
-                transform: translateY(-10px);
-    }
-
-    100% {
-        -webkit-transform: translateY(0);
-                transform: translateY(0);
+        transform: translateX(10px);
     }
 }
 
 @keyframes bounce {
     0% {
-        -webkit-transform: translateY(-2000px);
-                transform: translateY(-2000px);
+        transform: translateY(-2000px);
     }
 
     70% {
-        -webkit-transform: translateY(30px);
-                transform: translateY(30px);
+        transform: translateY(30px);
     }
 
     90% {
-        -webkit-transform: translateY(-10px);
-                transform: translateY(-10px);
+        transform: translateY(-10px);
     }
 
     100% {
-        -webkit-transform: translateY(0);
-                transform: translateY(0);
+        transform: translateY(0);
     }
 }
 
 .modal-show {
     display: block;
 
-    -webkit-animation: bounce 0.6s;
-
-            animation: bounce 0.6s;
+    animation: bounce 0.6s;
 }
 
 .modal-error {
-    -webkit-animation: shake 0.6s;
-            animation: shake 0.6s;
+    animation: shake 0.6s;
 }

@@ -26,7 +26,7 @@ a{text-decoration:none}.overlay{position:fixed;top:0;right:0;bottom:0;left:0;z-i
 .menu-list{padding-bottom:5px}
 .menu-drop{position:absolute;z-index:6;display:none;width:143px;width:143px;height:171px;height:171px;margin-top:5px;margin-left:-7px;line-height:16px;text-align:left;color:#323232;background-color:#f8f7f4;border-radius:5px;box-shadow:0 20px 20px rgba(0,0,0,0.4)}
 .menu-drop p{width:121px;margin-top:10px;margin-bottom:6px;margin-left:6px;padding-bottom:10px;padding-left:17px;border-bottom:1px solid #d1d0ce}
-.menu-drop ul{margin:0;padding:0}
+.menu-drop ul{margin-left:0;padding:0}
 .menu-drop a{display:block;width:122px;padding-top:8px;padding-bottom:8px;padding-left:21px;font-weight:400;font-size:14px;color:inherit}
 .menu-drop-current{background-color:#d07058}
 .menu-drop a:hover,.menu-drop a:focus{background-color:#fbded7}
@@ -142,7 +142,7 @@ a{text-decoration:none}.overlay{position:fixed;top:0;right:0;bottom:0;left:0;z-i
 .slide-1-checker:checked ~ .site-wrapper{background-color:#849d8f;background-image:url("../img/sliderbg1.png")}
 .slide-2-checker:checked ~ .site-wrapper{background-color:#8996a6;background-image:url("../img/sliderbg2.png")}
 .slide-3-checker:checked ~ .site-wrapper{background-color:#9d8b84;background-image:url("../img/sliderbg3.png")}
-.slide-1-checker:checked ~ .site-wrapper .slide-1,.slide-2-checker:checked ~ .site-wrapper .slide-2,.slide-3-checker:checked ~ .site-wrapper .slide-3{display:block}
+.slide-1-checker:checked ~ .site-wrapper #slide1,.slide-2-checker:checked ~ .site-wrapper #slide2,.slide-3-checker:checked ~ .site-wrapper #slide3{display:block}
 .slide-1-checker:checked ~ .site-wrapper label[for="slide-1"],.slide-2-checker:checked ~ .site-wrapper label[for="slide-2"],.slide-3-checker:checked ~ .site-wrapper label[for="slide-3"]{background-color:#fff}
 .slide-1-checker:checked:hover ~ .site-wrapper label[for="slide-1"],.slide-2-checker:checked:hover ~ .site-wrapper label[for="slide-2"],.slide-3-checker:checked:hover ~ .site-wrapper label[for="slide-3"]{background-color:#fff}
 .slide-1-checker:hover ~ .site-wrapper label[for="slide-1"],.slide-2-checker:hover ~ .site-wrapper label[for="slide-2"],.slide-3-checker:hover ~ .site-wrapper label[for="slide-3"]{background-color:#b2c1b7}
