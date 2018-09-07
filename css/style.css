@@ -278,7 +278,7 @@ a {
 }
 
 .menu-drop ul {
-    margin-left: 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -1218,9 +1218,9 @@ a {
     background-image: url("../img/sliderbg3.png");
 }
 
-.slide-1-checker:checked ~ .site-wrapper #slide1,
-.slide-2-checker:checked ~ .site-wrapper #slide2,
-.slide-3-checker:checked ~ .site-wrapper #slide3 {
+.slide-1-checker:checked ~ .site-wrapper .slide-1,
+.slide-2-checker:checked ~ .site-wrapper .slide-2,
+.slide-3-checker:checked ~ .site-wrapper .slide-3 {
     display: block;
 }
 
