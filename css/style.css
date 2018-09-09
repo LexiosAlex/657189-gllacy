@@ -1073,8 +1073,8 @@ a {
     box-shadow: inset 0 2px 1px #696969;
 }
 
-.filter-input-checkbox:focus~label,
-.filter-input-radio:focus~label,
+.filter-input-checkbox:focus + label.field-label,
+.filter-input-radio:focus + label.field-label,
 .radio-option:hover,
 .select-option:hover {
     opacity: 1;
