@@ -814,8 +814,6 @@ a {
 
 .radio-option {
     position: relative;
-
-    opacity: 0.8;
 }
 
 
@@ -829,6 +827,8 @@ a {
     cursor: pointer;
 
     user-select: none;
+
+    opacity: 0.8;
 }
 
 .radio-option label::before {
@@ -842,6 +842,8 @@ a {
 
     border: 4px solid #ffffff;
     border-radius: 50%;
+
+    opacity: 0.8;
 }
 
 .filter-input-radio:checked + label::after {
@@ -859,8 +861,6 @@ a {
 
 .select-option {
     position: relative;
-
-    opacity: 0.8;
 }
 
 
@@ -874,6 +874,8 @@ a {
     cursor: pointer;
 
     user-select: none;
+
+    opacity: 0.8;
 }
 
 .select-option label::before {
@@ -887,6 +889,8 @@ a {
 
     border: 2px solid rgba(255,255,255, 0.8);
     border-radius: 3px;
+
+    opacity: 0.8;
 }
 
 .filter-input-checkbox:checked + label::after {
@@ -1057,7 +1061,8 @@ a {
     border-radius: 50px;
 }
 
-.sort-btn:hover {
+.sort-btn:hover,
+.sort-btn:focus{
     color: #323232;
 
     background-color: #ffffff;
@@ -1073,10 +1078,14 @@ a {
     box-shadow: inset 0 2px 1px #696969;
 }
 
-.filter-input-checkbox:focus + label.field-label,
-.filter-input-radio:focus + label.field-label,
-.radio-option:hover,
-.select-option:hover {
+.radio-option:hover label,
+.select-option:hover label,
+.radio-option:hover label::before,
+.select-option:hover label::before,
+.radio-option:focus label,
+.select-option:focus label,
+.radio-option:focus label::before,
+.select-option:focus label::before {
     opacity: 1;
 }
 
@@ -1091,8 +1100,6 @@ a {
     box-sizing: border-box;
     min-width: 24px;
     height: 24px;
-    /*margin-left: 5px;
-    padding-left: 8px;*/
 
     line-height: 1;
     line-height: 28px;
@@ -1110,7 +1117,8 @@ a {
     background-color: #ffffff;
 }
 
-.pagination-item a:hover {
+.pagination-item a:hover,
+.pagination-item a:focus {
     background: rgba(255, 255, 255, 0.2);
 }
 .pagination-item:first-child > a,
@@ -1131,7 +1139,8 @@ a {
     background-image: url("../img/page-arrow.svg");
 }
 
-.current > a:hover {
+.current > a:hover,
+.current > a:focus {
     color: #323232;
 
     background-color: #ffffff;
