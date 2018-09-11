@@ -43,7 +43,7 @@ a{text-decoration:none}.overlay{position:fixed;top:0;right:0;bottom:0;left:0;z-i
 .main-header-logo{width:50px;margin:0;padding-top:8px}
 .main-header{width:100%}
 .site-navigation{display:flex;flex-wrap:wrap;justify-content:space-between;margin:0;margin-top:24px;margin-right:0;margin-left:0;padding:0}
-.user-navigation{display:flex;flex-wrap:wrap;justify-content:flex-end;width:30%;min-width:250px;margin-top:24px;margin-right:0;margin-bottom:0;margin-left:auto;padding:0}
+.user-navigation{display:flex;flex-wrap:wrap;justify-content:flex-end;width:36%;min-width:250px;margin-top:24px;margin-right:0;margin-bottom:0;margin-left:auto;padding:0}
 .working-time{margin-left:auto;text-align:right}
 .working-time p{margin:0;margin-bottom:8px;padding:0}
 .user-navigation li,.site-navigation li{list-style:none}
@@ -152,7 +152,7 @@ a{text-decoration:none}.overlay{position:fixed;top:0;right:0;bottom:0;left:0;z-i
 .sort-btn{-ms-grid-row-align:center;align-self:center;margin-top:6px;margin-right:0;margin-left:auto;padding:7px 28px;color:#fff;background-color:rgba(255,255,255,0.2);border:2px solid #fff;border-radius:50px}
 .sort-btn:hover,.sort-btn:focus{color:#323232;background-color:#fff}
 .sort-btn:active{padding:9px 30px;color:#323232;background-color:#ededed;box-shadow:inset 0 2px 1px #696969;border:none;}
-.radio-option:hover label,.select-option:hover label,.radio-option:hover label::before,.select-option:hover label::before,.radio-option:focus label,.select-option:focus label,.radio-option:focus label::before,.select-option:focus label::before{opacity:1}
+.radio-option:hover label,.select-option:hover label,.radio-option:hover label::before,.select-option:hover label::before,.filter-input-radio:focus + label,.filter-input-checkbox:focus + label,.filter-input-radio:focus + label::before,.filter-input-checkbox:focus + label::before {opacity: 1;}
 .radio-option-locked,.select-option-locked{opacity:.4}
 .pagination-item a{display:inline-block;box-sizing:border-box;min-width:24px;height:24px;padding-left:8px;line-height:1;line-height:28px;font-family:sans-serif;vertical-align:middle;color:#fff;text-decoration:none;border-radius:28px}
 .current>a{color:#323232;background-color:#fff}
@@ -205,7 +205,7 @@ a{text-decoration:none}.overlay{position:fixed;top:0;right:0;bottom:0;left:0;z-i
 .product:hover .product-btn,.product:hover+.product-btn,.product:focus+.product-btn{visibility:visible}
 .product:hover{z-index:5;box-shadow:0 20px 20px rgba(0,0,0,0.4)}
 .advantages{width:100%;margin-top:23px}
-.advantages-background{display:flex;flex-direction:column;max-width:1146px;list-style:none;color:#323232;background-color:#e8dbbe;background-image:url("../img/waffelbg.jpg");border-radius:15px}
+.advantages-background{display:flex;flex-direction:column;max-width:1146px;min-height:300px;list-style:none;color:#323232;background-color:#e8dbbe;background-image:url("../img/waffelbg.jpg");border-radius:15px}
 .advantages-about{margin:0;padding:0;padding-top:25px;padding-left:18px;font-weight:500;font-size:24px;line-height:30px}
 .advantages-description{display:flex;flex-direction:row;flex-wrap:wrap;margin-top:0;padding:0;padding-bottom:8px}
 .advantages-dicription-item{position:relative;display:flex;width:46.5%;margin-left:20px;padding-top:20px;list-style:none;font-weight:400;font-size:16px;line-height:22px}
