@@ -828,6 +828,7 @@ a {
     border-top-color: #000000;
 }
 
+.sort-popularity select:focus,
 .sort-popularity select:hover,
 .popularity-select-container:hover,
 .popularity-select-container:hover > select {
